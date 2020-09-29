@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 class="walltitle">HISTORIAS / SENTIDO / INSPIRACION</h1>
+    <Wall />
+    <Banner />
+    <Footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Wall from "@/components/Wall";
+import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  components: { Wall, Banner, Footer },
+};
 </script>
+<style scoped>
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+.walltitle {
+  font-family: "PT Serif", serif;
+  font-weight: lighter;
+}
+</style>
