@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style>
+.footer {
+  z-index: 6;
+  background-color: var(--neutral-light);
+}
 li {
   list-style-type: none;
   display: inline-block;

@@ -17,12 +17,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #wall {
   display: grid;
   gap: 40px;
   line-height: 0px;
   margin: 0 auto;
+  z-index: 4;
+  background-color: var(--neutral-light);
 }
 
 /* Extra small devices (phones, 600px and down) */

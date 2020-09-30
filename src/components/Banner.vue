@@ -16,5 +16,8 @@ export default {
 .banner {
   background-color: var(--primary-dark);
   width: 100%;
+  z-index: 5;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 </style>
