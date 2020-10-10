@@ -44,7 +44,7 @@ export default {
 }
 
 h2 {
-  border-bottom: 1px solid var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
 }
 
 p {

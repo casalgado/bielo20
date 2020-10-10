@@ -49,7 +49,7 @@ img {
 
 .overlay {
   opacity: 0;
-  background-color: var(--primary-dark);
+  background-color: black;
   width: 100%;
   padding-top: 100%;
   position: absolute;
@@ -72,7 +72,7 @@ img {
 }
 
 .overlay:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   cursor: pointer;
 }
 </style>

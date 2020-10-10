@@ -9,7 +9,6 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-
     <h1 class="walltitle">HISTORIAS / SENTIDO / INSPIRACION</h1>
     <Wall />
     <Banner />
@@ -29,6 +28,14 @@ import IntroText from "@/components/IntroText";
 export default {
   name: "Home",
   components: { Navbar, Landing, Wall, Banner, Contact, Footer, IntroText },
+  methods: {
+    handleScroll() {
+      this.$store.commit("setScroll", window.pageYOffset);
+    },
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
 };
 </script>
 <style scoped>

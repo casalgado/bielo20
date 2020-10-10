@@ -6,7 +6,7 @@
 
 <style>
 :root {
-  --primary-dark: rgb(28, 38, 40);
+  --primary-dark: rgb(82, 45, 91);
   --primary-light: rgb(220, 240, 238);
   --neutral-dark: rgb(30, 30, 30);
   --neutral-light: rgb(238, 238, 238);

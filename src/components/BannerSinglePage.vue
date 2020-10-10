@@ -4,9 +4,9 @@
       <h1 class="title-text">BIELO:</h1>
       <h1 class="subtitle-text">equipo</h1>
     </div>
-    <BannerSingleImage />
-    <BannerSingleImage />
-    <BannerSingleImage />
+    <BannerSingleImage imgName="f1.jpg" title="camilo" />
+    <BannerSingleImage imgName="f2.jpg" title="esteban" />
+    <BannerSingleImage imgName="f3.jpg" title="andres" />
   </div>
 </template>
 

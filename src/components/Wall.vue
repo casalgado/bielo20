@@ -1,11 +1,19 @@
 <template>
   <div id="wall">
-    <WallSingleImage />
-    <WallSingleImage />
-    <WallSingleImage />
-    <WallSingleImage />
-    <WallSingleImage />
-    <WallSingleImage />
+    <WallSingleImage imgName="one.jpg" title="MICROCOSMOS" />
+    <WallSingleImage
+      imgName="two.jpg"
+      title="JUNIOR FC"
+      description="tu papa, los demas valen"
+    />
+    <WallSingleImage imgName="three.jpg" title="ESPORTS" />
+    <WallSingleImage imgName="four.jpg" title="TEXTILES" />
+    <WallSingleImage
+      imgName="five.jpg"
+      title="SANNUS FOODS"
+      description="alimentacion para el planeta"
+    />
+    <WallSingleImage imgName="six.jpg" title="DELIVERY 2.0" />
   </div>
 </template>
 

@@ -35,6 +35,8 @@ export default {
 img {
   width: 75%;
   margin: 15px;
+  /* -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%); */
 }
 
 .title {
