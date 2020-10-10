@@ -11,7 +11,7 @@ export default {};
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-color: var(--primary-dark);
+  background-color: var(--primary-accent);
   z-index: -1;
 }
 </style>

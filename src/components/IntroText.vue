@@ -23,7 +23,7 @@ h1 {
   font-weight: lighter;
   font-size: 3.1em;
   font-family: "PT Serif";
-  padding: 15% 10% 18% 10%;
+  padding: 10% 10% 18% 10%;
   min-height: 100vh;
   background-color: var(--primary-dark);
   color: var(--neutral-light);
@@ -32,7 +32,7 @@ h1 {
 }
 
 .gradient {
-  height: 1600px;
+  height: 120vh;
   background: linear-gradient(
     0deg,
     var(--primary-dark) 0%,

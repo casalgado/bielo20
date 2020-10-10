@@ -7,7 +7,9 @@
 <style>
 :root {
   --primary-dark: rgb(82, 45, 91);
-  --primary-light: rgb(220, 240, 238);
+  --primary-light: rgb(210, 230, 3);
+  --primary-accent: rgb(215, 56, 94);
+  --secondary-light: rgb(220, 240, 238);
   --neutral-dark: rgb(30, 30, 30);
   --neutral-light: rgb(238, 238, 238);
 }
