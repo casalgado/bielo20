@@ -177,6 +177,7 @@ export default {
   created() {
     if (window.innerwidth < 400) {
       console.log(window.innerWidth);
+      this.logoWidth = 200;
     }
   },
 };
