@@ -26,7 +26,7 @@ export default {
 li {
   list-style-type: none;
   display: inline-block;
-  margin: 10px;
+  margin-right: 8px;
 }
 
 .left {
@@ -34,7 +34,40 @@ li {
 }
 
 .right {
-  float: right;
-  margin-right: 16px;
+  float: left;
+  clear: both;
+  margin-right: 0px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 700px) {
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+    margin-right: 16px;
+  }
+
+  li {
+    margin: 10px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1100px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 </style>

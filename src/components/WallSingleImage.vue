@@ -49,12 +49,13 @@ img {
 
 .overlay {
   opacity: 0;
-  background-color: black;
+  background-color: var(--primary-accent);
   width: 100%;
   padding-top: 100%;
   position: absolute;
   top: 0;
   margin: 0 auto;
+  transition: opacity 0.3s ease;
 }
 
 .overlay * {
@@ -74,5 +75,25 @@ img {
 .overlay:hover {
   opacity: 0.9;
   cursor: pointer;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 700px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1100px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 </style>

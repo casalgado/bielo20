@@ -21,14 +21,13 @@ export default {
 <style scoped>
 h1 {
   font-weight: lighter;
-  font-size: 3.1em;
+  font-size: 1.5em;
   font-family: "PT Serif";
-  padding: 10% 10% 18% 10%;
-  min-height: 100vh;
+  padding: 40% 10% 18% 10%;
+  min-height: 110vh;
   background-color: var(--primary-dark);
   color: var(--neutral-light);
   margin: 0;
-  position: relative;
 }
 
 .gradient {
@@ -46,6 +45,30 @@ h1 {
     rgba(28, 38, 40, 0.20351890756302526) 50%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 3.1em;
+    padding: 10% 10% 18% 10%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1100px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 
 .intro-text,

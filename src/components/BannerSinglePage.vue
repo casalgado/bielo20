@@ -21,14 +21,14 @@ export default {
 <style scoped>
 .page {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   max-width: 921px;
   margin: 0 auto;
 }
 
 .banner-title {
-  grid-column: span 3;
+  grid-column: span 1;
 }
 
 .banner-title * {
@@ -47,6 +47,7 @@ export default {
   .banner-title {
     width: 100%;
     max-width: 594px;
+    padding-left: 20px;
   }
 }
 
@@ -55,6 +56,7 @@ export default {
     width: 100%;
     min-width: 594px;
     max-width: 900px;
+    grid-column: span 3;
   }
 }
 

@@ -13,5 +13,7 @@ export default {};
   height: 100vh;
   background-color: var(--primary-accent);
   z-index: -1;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 </style>

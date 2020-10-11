@@ -108,7 +108,7 @@ export default {
       let opacityEndScroll = 2400;
 
       // width props
-      let maxWidth = 400;
+      let maxWidth = this.logoWidth;
       let minWidth = 130;
 
       // top props
@@ -174,6 +174,11 @@ export default {
           (opacityEndScroll - opacityStartScroll);
     },
   },
+  created() {
+    if (window.innerwidth < 400) {
+      console.log(window.innerWidth);
+    }
+  },
 };
 </script>
 
@@ -209,8 +214,30 @@ export default {
 
 #logo {
   padding-top: 20px;
-  width: 400px;
   position: relative;
   top: 250px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+  .nav-center {
+    padding-top: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 700px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1100px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 </style>

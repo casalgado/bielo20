@@ -25,6 +25,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "PT Sans", sans-serif;
   text-align: center;
-  color: var(--neutral-dark);
+  color: var(--primary-dark);
 }
 </style>
