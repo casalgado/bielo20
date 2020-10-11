@@ -99,7 +99,6 @@ export default {
   },
   watch: {
     scroll() {
-      console.log(this.scroll);
       let positionOne = this.scroll;
       let positionTwo = this.scroll;
 
