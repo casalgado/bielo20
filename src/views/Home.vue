@@ -36,6 +36,9 @@ export default {
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 <style scoped>

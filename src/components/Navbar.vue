@@ -23,17 +23,44 @@
     <div class="nav-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 82.73 32.23"
-        id="logo"
+        viewBox="0 0 92.38 43.63"
+        class="vector"
+        id="whale"
         v-bind:style="{
-          width: logoWidth + 'px',
-          top: logoTop + 'px',
+          width: '459.7' + 'px',
           fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
         }"
       >
-        <title>Asset 2</title>
+        <defs>
+          <mask id="whMaskCont">
+            <rect id="whMask" x="0" y="0" width="93" height="46" fill="#fff" />
+          </mask>
+        </defs>
+        <title>whale</title>
 
-        <g id="Layer_1-2" data-name="Layer 1">
+        <path
+          mask="url(#whMaskCont)"
+          class="cls-1"
+          d="M39.58,12.2h-.07C22,12.2,14.86,9.92,11.22,8.6a7.63,7.63,0,0,0,4-6.72c0-4.21-6.93,0-7.36,0S0-2.33,0,1.88A7.62,7.62,0,0,0,5.7,9.25c-2.39,6.14,5,34.38,33.81,34.38.87,0,1.74,0,2.59-.07H92.38V12.2Z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82.73 32.23"
+        class="vector"
+        v-bind:style="{
+          width: logoWidth + 'px',
+          top: logoTop + 'px',
+          'margin-left': logoLeft + 'px',
+          fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
+        }"
+      >
+        <defs>
+          <mask id="flMaskCont">
+            <rect id="flMask" x="0" y="0" width="22" height="35" fill="#fff" />
+          </mask>
+        </defs>
+        <g id="full-logo" mask="url(#flMaskCont)">
           <path
             class="logoVector"
             d="M27.65,14.39a3,3,0,0,1-2.06-.79,2.39,2.39,0,0,1-.88-1.85,2.45,2.45,0,0,1,.88-1.89,3.12,3.12,0,0,1,4.13,0,2.48,2.48,0,0,1,.87,1.89,2.69,2.69,0,0,1-.3,1.13,2.45,2.45,0,0,1-1,1.07A3.17,3.17,0,0,1,27.65,14.39ZM25.09,31.58V15.74h5.15V31.58Z"
@@ -76,12 +103,14 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
 export default {
   name: "Navbar",
   data() {
     return {
       logoWidth: 400,
       logoTop: 250,
+      logoLeft: 0,
       opacity: 0,
       navSidesColor: 238,
       logoRed: 210,
@@ -97,6 +126,37 @@ export default {
       return this.$store.state.scrollPosition;
     },
   },
+  methods: {
+    animate: function() {
+      gsap.to(".nav-center", {
+        duration: 1,
+        left: "160px",
+        ease: "easeIn",
+      });
+      gsap
+        .to(".nav-center", {
+          duration: 2,
+          left: "-200px",
+          ease: "easeIn",
+        })
+        .delay(1);
+      gsap
+        .to("#whMask", {
+          duration: 1,
+          width: 0,
+          x: 93,
+          ease: "easeIn",
+        })
+        .delay(1);
+      gsap
+        .to("#flMask", {
+          duration: 1,
+          width: 90,
+          ease: "easeOut",
+        })
+        .delay(1.9);
+    },
+  },
   watch: {
     scroll() {
       let positionOne = this.scroll;
@@ -108,12 +168,16 @@ export default {
       let opacityEndScroll = 2400;
 
       // width props
-      let maxWidth = this.logoWidth;
+      let maxWidth = 400;
       let minWidth = 130;
 
       // top props
       let maxTop = 250;
       let minTop = 0;
+
+      // left props
+      let endLeft = 0;
+      let startLeft = 100;
 
       // color props logo
       let startRed = 82;
@@ -141,7 +205,9 @@ export default {
         maxWidth - (maxWidth - minWidth) * (positionOne / maxNavScroll);
 
       this.logoTop = maxTop - (maxTop - minTop) * (positionOne / maxNavScroll);
-
+      this.logoLeft =
+        endLeft - (endLeft - startLeft) * (positionOne / maxNavScroll);
+      console.log(this.logoLeft);
       this.opacity =
         1 -
         (opacityEndScroll - positionTwo) /
@@ -178,7 +244,13 @@ export default {
     if (window.innerwidth < 400) {
       console.log(window.innerWidth);
       this.logoWidth = 200;
+    } else {
+      this.logoWidth = 400;
     }
+  },
+  mounted() {
+    this.animate();
+    window.scrollTo(0, 0);
   },
 };
 </script>
@@ -213,10 +285,15 @@ export default {
   margin-right: 25px;
 }
 
-#logo {
+.vector {
   padding-top: 20px;
-  position: relative;
+  position: absolute;
   top: 250px;
+}
+
+#whale {
+  top: 189.4px;
+  right: 50%;
 }
 
 /* Extra small devices (phones, 600px and down) */

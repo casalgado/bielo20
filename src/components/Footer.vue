@@ -52,6 +52,7 @@ li {
   .right {
     float: right;
     margin-right: 16px;
+    clear: none;
   }
 
   li {
