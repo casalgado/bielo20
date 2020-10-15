@@ -17,10 +17,11 @@
           navLinksGreen +
           ')',
       }"
+      @click="scrollTo(2570)"
     >
       Historias
     </p>
-    <div class="nav-center">
+    <div class="nav-center" @click="scrollTo(0)">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 92.38 43.63"
@@ -96,6 +97,7 @@
           navLinksGreen +
           ')',
       }"
+      @click="scrollTo(3724)"
     >
       Contacto
     </p>
@@ -155,6 +157,13 @@ export default {
           ease: "easeOut",
         })
         .delay(1.9);
+    },
+    scrollTo(to) {
+      window.scroll({
+        top: to,
+        left: 0,
+        behavior: "smooth",
+      });
     },
   },
   watch: {
@@ -269,6 +278,7 @@ export default {
   font-size: 1.4em;
   padding-top: 10px;
   color: var(--neutral-light);
+  cursor: pointer;
 }
 
 .nav-left {
@@ -278,6 +288,7 @@ export default {
 
 .nav-center {
   position: relative;
+  cursor: pointer;
 }
 
 .nav-right {

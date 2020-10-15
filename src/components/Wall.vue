@@ -38,7 +38,7 @@ export default {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 700px) {
   #wall {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-left: 20px;
     margin-right: 20px;
