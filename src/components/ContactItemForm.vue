@@ -1,10 +1,23 @@
 <template>
   <div class="c-item">
     <h2 @click="sendEmail">{{ title }}</h2>
-    <p v-if="info1">{{ info1 }}</p>
-    <p v-if="info2">{{ info2 }}</p>
-    <p v-if="info3">{{ info3 }}</p>
-    <p v-if="info4">{{ info4 }}</p>
+    <form id="contact-form">
+      <input v-model="client.name" :disabled="sent" :placeholder="info2" />
+      <input v-model="client.email" :disabled="sent" :placeholder="info3" />
+      <input v-model="client.phone" :disabled="sent" :placeholder="info4" />
+      <textarea
+        v-model="client.comment"
+        :disabled="sent"
+        :placeholder="info1"
+      />
+      <button
+        @click.stop.prevent="sendEmail"
+        :disabled="sent"
+        :class="sent ? 'msg-sent' : ''"
+      >
+        {{ sent ? "mensaje enviado" : "enviar" }}
+      </button>
+    </form>
   </div>
 </template>
 
@@ -36,11 +49,12 @@ export default {
   },
   data() {
     return {
+      sent: false,
       client: {
-        name: "1",
-        email: "1",
-        phone: "1",
-        client: "1",
+        name: "",
+        email: "",
+        phone: "",
+        client: "",
       },
     };
   },
@@ -57,15 +71,17 @@ export default {
         client_phone: this.client.phone,
         client_comment: this.client.comment,
       };
-      emailjs.send(serviceID, templateID, templateParams, userID).then(
-        function(response) {
-          console.log("SUCCESS!", response.status, response.text);
-          this.sent = true;
-        }.bind(this),
-        function(error) {
-          console.log("FAILED...", error);
-        }
-      );
+      if (!this.sent) {
+        emailjs.send(serviceID, templateID, templateParams, userID).then(
+          function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            this.sent = true;
+          }.bind(this),
+          function(error) {
+            console.log("FAILED...", error);
+          }
+        );
+      }
     },
   },
 };
@@ -80,6 +96,44 @@ export default {
 
 h2 {
   border-bottom: 2px solid var(--primary-dark);
+}
+
+#contact-form textarea,
+#contact-form input {
+  font-family: "Pt sans";
+  width: 100%;
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: transparent;
+  border: none;
+}
+
+#contact-form textarea::placeholder,
+#contact-form input::placeholder {
+  color: var(--primary-dark);
+}
+
+#contact-form button {
+  margin: 0 auto;
+  padding: 5px 15px 5px 15px;
+  font-size: 1.4em;
+  font-family: "Pt sans";
+  border-radius: 8px;
+  border: 2px solid rgb(55, 30, 61);
+  color: white;
+  background-color: var(--primary-dark);
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: rgb(69, 38, 77);
+}
+
+.msg-sent {
+  cursor: default !important;
+  border: 1px solid rgb(189, 189, 189) !important;
+  background-color: rgb(189, 189, 189) !important;
 }
 
 p {

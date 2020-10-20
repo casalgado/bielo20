@@ -9,10 +9,11 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-    <h1 class="walltitle">HISTORIAS / SENTIDO / INSPIRACION</h1>
+    <h1 class="walltitle">HISTORIAS QUE EL MUNDO DEBE ESCUCHAR</h1>
     <Wall />
     <Banner />
     <Contact />
+
     <Footer />
   </div>
 </template>
@@ -49,11 +50,12 @@ export default {
 }
 
 .walltitle {
-  font-family: "PT Serif", serif;
+  font-family: "PT Sans", sans;
   font-weight: lighter;
   z-index: 3;
   background-color: var(--neutral-light);
   margin: 0;
+  font-size: 3em;
 }
 
 .transition {
@@ -70,5 +72,11 @@ export default {
   height: 150vh;
   background-color: var(--neutral-light);
   position: absolute;
+}
+
+iframe {
+  width: 100%;
+  height: 170px;
+  border: 1px solid black;
 }
 </style>

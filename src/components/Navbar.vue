@@ -21,7 +21,7 @@
     >
       Historias
     </p>
-    <div class="nav-center" @click="scrollTo(0)">
+    <div class="nav-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 92.38 43.63"
@@ -49,12 +49,14 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 82.73 32.23"
         class="vector"
+        id="just-logo"
         v-bind:style="{
           width: logoWidth + 'px',
           top: logoTop + 'px',
           'margin-left': logoLeft + 'px',
           fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
         }"
+        @click="scrollTo(0)"
       >
         <defs>
           <mask id="flMaskCont">
@@ -288,7 +290,6 @@ export default {
 
 .nav-center {
   position: relative;
-  cursor: pointer;
 }
 
 .nav-right {
@@ -300,6 +301,10 @@ export default {
   padding-top: 20px;
   position: absolute;
   top: 250px;
+}
+
+#just-logo {
+  cursor: pointer;
 }
 
 #whale {

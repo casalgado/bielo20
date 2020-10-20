@@ -27,4 +27,15 @@ body {
   text-align: center;
   color: var(--primary-dark);
 }
+
+*:active,
+*:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-width: 0;
+  outline-style: none;
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
 </style>

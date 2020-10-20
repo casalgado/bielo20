@@ -7,10 +7,10 @@
     />
     <ContactItemForm
       title="Mensaje Directo"
-      info1="Nombre"
-      info2="Correo"
-      info3="Telefono"
-      info4="Motivo"
+      info1="Cuentanos Algo"
+      info2="Nombre"
+      info3="Correo"
+      info4="Telefono"
     />
   </div>
 </template>
