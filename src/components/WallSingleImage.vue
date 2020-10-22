@@ -1,9 +1,8 @@
 <template>
   <div class="single">
     <img :src="src" />
-    <div class="overlay">
+    <div class="overlay" @click="setMediaUrl">
       <h1>{{ title }}</h1>
-      <p>{{ description }}</p>
     </div>
   </div>
 </template>
@@ -23,11 +22,20 @@ export default {
     },
     title: {
       type: String,
-      default: () => "TITULO",
+      default: () => "ESCUCHAR",
     },
     description: {
       type: String,
       default: () => "breve descripcion",
+    },
+    url: {
+      type: String,
+      default: () => "liquipedia.net",
+    },
+  },
+  methods: {
+    setMediaUrl: function() {
+      this.$store.commit("setMediaUrl", this.url);
     },
   },
   computed: {

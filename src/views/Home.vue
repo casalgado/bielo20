@@ -9,10 +9,21 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-    <h1 class="walltitle">HISTORIAS QUE EL MUNDO DEBE ESCUCHAR</h1>
+    <h1 class="walltitle" @click="testState">
+      HISTORIAS QUE EL MUNDO DEBE ESCUCHAR
+    </h1>
     <Wall />
     <Banner />
     <Contact />
+
+    <iframe
+      :style="'height: ' + iframeHeight + 'px;'"
+      frameborder="no"
+      scrolling="no"
+      seamless
+      :src="src"
+      :key="frameKey"
+    ></iframe>
 
     <Footer />
   </div>
@@ -29,13 +40,39 @@ import IntroText from "@/components/IntroText";
 export default {
   name: "Home",
   components: { Navbar, Landing, Wall, Banner, Contact, Footer, IntroText },
+  data() {
+    return {
+      src: "",
+      iframeHeight: 170,
+    };
+  },
   methods: {
     handleScroll() {
       this.$store.commit("setScroll", window.pageYOffset);
     },
+    testState() {
+      console.log(this.$store.state.mediaUrl);
+    },
+  },
+  computed: {
+    mediaUrl() {
+      return this.$store.state.mediaUrl;
+    },
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    mediaUrl() {
+      console.log("here");
+      this.src = this.mediaUrl;
+      this.frameKey++;
+      if (this.src.includes("spotify")) {
+        this.iframeHeight = 150;
+      } else {
+        this.iframeHeight = 170;
+      }
+    },
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -75,8 +112,9 @@ export default {
 }
 
 iframe {
+  position: fixed;
+  bottom: 0px;
   width: 100%;
-  height: 170px;
-  border: 1px solid black;
+  z-index: 9;
 }
 </style>

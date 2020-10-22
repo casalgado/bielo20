@@ -26,6 +26,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 92.38 43.63"
         class="vector"
+        :class="hideWhale ? 'hide' : 'show'"
         id="whale"
         v-bind:style="{
           width: '459.7' + 'px',
@@ -123,6 +124,7 @@ export default {
       navLinksRed: 238,
       navLinksBlue: 238,
       navLinksGreen: 238,
+      hideWhale: false,
     };
   },
   computed: {
@@ -159,6 +161,12 @@ export default {
           ease: "easeOut",
         })
         .delay(1.9);
+      setTimeout(
+        function() {
+          this.hideWhale = true;
+        }.bind(this),
+        2000
+      );
     },
     scrollTo(to) {
       window.scroll({
@@ -218,7 +226,7 @@ export default {
       this.logoTop = maxTop - (maxTop - minTop) * (positionOne / maxNavScroll);
       this.logoLeft =
         endLeft - (endLeft - startLeft) * (positionOne / maxNavScroll);
-      console.log(this.logoLeft);
+
       this.opacity =
         1 -
         (opacityEndScroll - positionTwo) /
@@ -301,6 +309,10 @@ export default {
   padding-top: 20px;
   position: absolute;
   top: 250px;
+}
+
+.hide {
+  display: none;
 }
 
 #just-logo {
