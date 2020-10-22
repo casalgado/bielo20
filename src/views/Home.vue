@@ -16,14 +16,17 @@
     <Banner />
     <Contact />
 
-    <iframe
-      :style="'height: ' + iframeHeight + 'px;'"
-      frameborder="no"
-      scrolling="no"
-      seamless
-      :src="src"
-      :key="frameKey"
-    ></iframe>
+    <div id="iframeCont" v-if="showFrame">
+      <iframe
+        :style="'height: ' + iframeHeight + 'px;'"
+        frameborder="no"
+        scrolling="no"
+        seamless
+        :src="src"
+        :key="frameKey"
+      ></iframe>
+      <p @click="showFrame = false">×</p>
+    </div>
 
     <Footer />
   </div>
@@ -44,6 +47,7 @@ export default {
     return {
       src: "",
       iframeHeight: 170,
+      showFrame: false,
     };
   },
   methods: {
@@ -66,6 +70,7 @@ export default {
     mediaUrl() {
       console.log("here");
       this.src = this.mediaUrl;
+      this.showFrame = true;
       this.frameKey++;
       if (this.src.includes("spotify")) {
         this.iframeHeight = 150;
@@ -112,9 +117,33 @@ export default {
 }
 
 iframe {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  z-index: 9;
+}
+
+#iframeCont {
   position: fixed;
   bottom: 0px;
   width: 100%;
   z-index: 9;
+  line-height: 0px;
+  background-color: rgba(82, 45, 91, 0.8);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+#iframeCont p {
+  position: absolute;
+  top: -12px;
+  right: 5px;
+  z-index: 10;
+  cursor: pointer;
+  line-height: 0px;
+  font-size: 25px;
+  width: 15px;
+  height: 15px;
+  color: var(--primary-accent);
 }
 </style>
