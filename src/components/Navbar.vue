@@ -17,7 +17,7 @@
           navLinksGreen +
           ')',
       }"
-      @click="scrollTo(2570)"
+      @click="scrollTo(historyBox)"
     >
       Historias
     </p>
@@ -101,7 +101,7 @@
           navLinksGreen +
           ')',
       }"
-      @click="scrollTo(3724)"
+      @click="scrollTo(contactBox)"
     >
       Contacto
     </p>
@@ -126,6 +126,8 @@ export default {
       navLinksBlue: 238,
       navLinksGreen: 238,
       hideWhale: false,
+      historyBox: 0,
+      contactBox: 0,
     };
   },
   computed: {
@@ -170,6 +172,7 @@ export default {
       );
     },
     scrollTo(to) {
+      console.log(to);
       window.scroll({
         top: to,
         left: 0,
@@ -275,6 +278,16 @@ export default {
   mounted() {
     this.animate();
     window.scrollTo(0, 0);
+    var viewportOffset1 = document
+      .getElementById("contact-box")
+      .getBoundingClientRect();
+    console.log(viewportOffset1.top);
+    this.contactBox = viewportOffset1.top;
+    var viewportOffset2 = document
+      .getElementById("history-box")
+      .getBoundingClientRect();
+    console.log(viewportOffset2.top);
+    this.historyBox = viewportOffset2.top;
   },
 };
 </script>
@@ -295,6 +308,7 @@ export default {
   padding-top: 10px;
   color: var(--neutral-light);
   cursor: pointer;
+  z-index: 99;
 }
 
 .nav-left {

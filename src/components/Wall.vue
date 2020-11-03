@@ -2,23 +2,23 @@
   <div id="wall">
     <WallSingleImage
       imgName="portada_abdp.jpg"
-      title="ESCUCHAR"
+      title=""
       url="https://player.captivate.fm/show/fa34297a-c538-4b83-9fbe-f2985d1d164e/latest/"
     />
     <WallSingleImage
       imgName="portada_ueo.png"
-      title="ESCUCHAR"
+      title=""
       url="https://open.spotify.com/embed-podcast/episode/2aIJ55hgHzgkTJHhPv2DO6"
     />
     <WallSingleImage
       imgName="portada_ec.jpg"
-      title="ESCUCHAR"
+      title=""
       url="https://open.spotify.com/embed-podcast/episode/2KoL7lxc04awzNXme1W5mn"
     />
     <WallSingleImage imgName="four.jpg" title="TEXTILES" />
     <WallSingleImage
       imgName="five.jpg"
-      title="SANNUS FOODS"
+      title=""
       description="alimentacion para el planeta"
     />
     <WallSingleImage imgName="six.jpg" title="DELIVERY 2.0" />

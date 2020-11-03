@@ -9,12 +9,12 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-    <h1 class="walltitle">
+    <h1 id="history-box" class="walltitle">
       HISTORIAS QUE EL MUNDO DEBE ESCUCHAR
     </h1>
     <Wall />
     <Banner />
-    <Contact />
+    <Contact id="contact-box" />
     <EmbedFrame />
     <Footer />
   </div>
@@ -64,6 +64,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
+  overflow: hidden;
 }
 
 .walltitle {
@@ -72,7 +73,30 @@ export default {
   z-index: 3;
   background-color: var(--neutral-light);
   margin: 0;
-  font-size: 3em;
+  font-size: 1.5em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 700px) {
+  .walltitle {
+    font-size: 3em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1100px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
 
 .transition {

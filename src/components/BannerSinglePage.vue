@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .page {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   max-width: 921px;
   margin: 0 auto;
@@ -49,13 +49,19 @@ export default {
     max-width: 594px;
     padding-left: 20px;
   }
+  .page {
+    grid-template-columns: 1fr;
+  }
+  .banner-title {
+    grid-column: span 1;
+  }
 }
 
 @media only screen and (min-width: 700px) {
+  .page {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .banner-title {
-    width: 100%;
-    min-width: 594px;
-    max-width: 900px;
     grid-column: span 3;
   }
 }

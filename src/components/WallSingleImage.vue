@@ -2,7 +2,7 @@
   <div class="single">
     <img :src="src" />
     <div class="overlay" @click="setMediaUrl">
-      <h1>{{ title }}</h1>
+      <img src="../assets/img/speaker.svg" />
     </div>
   </div>
 </template>
@@ -66,9 +66,11 @@ img {
   transition: opacity 0.3s ease;
 }
 
-.overlay * {
+.overlay img {
   position: absolute;
-  width: 100%;
+  top: 30%;
+  left: 30%;
+  width: 40%;
   color: var(--neutral-light);
 }
 
