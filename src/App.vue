@@ -23,7 +23,7 @@ body {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Helvetica";
   text-align: center;
   color: var(--primary-dark);
 }

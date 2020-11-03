@@ -114,6 +114,10 @@ h2 {
   color: var(--primary-dark);
 }
 
+#contact-form input::placeholder:focus {
+  color: gray;
+}
+
 #contact-form button {
   margin: 0 auto;
   padding: 5px 15px 5px 15px;
@@ -121,7 +125,7 @@ h2 {
   font-family: "Pt sans";
   border-radius: 8px;
   border: 2px solid rgb(55, 30, 61);
-  color: white;
+  color: var(--neutral-light);
   background-color: var(--primary-dark);
   cursor: pointer;
 }

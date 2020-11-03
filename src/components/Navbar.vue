@@ -30,6 +30,7 @@
         id="whale"
         v-bind:style="{
           width: '459.7' + 'px',
+          top: logoTop - 60.6 + 'px',
           fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
         }"
       >
@@ -211,6 +212,10 @@ export default {
       let linkStartBlue = 238;
       let linkStartGreen = 238;
 
+      if (this.scroll > 5) {
+        this.hideWhale = true;
+      }
+
       if (this.scroll > maxNavScroll) {
         positionOne = maxNavScroll;
       }
@@ -279,6 +284,7 @@ export default {
   position: fixed;
   top: 0;
   display: grid;
+  padding-bottom: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   z-index: 6;
   width: 100%;

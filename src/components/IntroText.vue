@@ -3,10 +3,12 @@
     <div class="gradient"></div>
     <vue-position-sticky :offsetTop="0" id="it">
       <h1 class="intro-text">
-        Yo sueño que estoy aquí destas prisiones cargado, y soñé que en otro
-        estado más lisonjero me ví. ¿Qué es la vida? Un frenesí. ¿Qué es la
-        vida? Una ilusión, una sombra, una ficción, y el mayor bien es pequeño:
-        que toda la vida es sueño, y los sueños, sueños son.
+        Somos una productora de podcasts basada en Bogotá, Barranquila y Los
+        Angeles. En Bielo usamos el poder de las historias, creemos en su
+        capacidad de conexión, la fuerza del vínculo que generan y la facilidad
+        que la tecnologia nos brinda para contarlas. Bielo es el centro creativo
+        donde las grandes ideas se encuentran con impecable producción para
+        contar las historias que el mundo debe escuchar.
       </h1>
     </vue-position-sticky>
   </div>
@@ -22,7 +24,7 @@ export default {
 h1 {
   font-weight: lighter;
   font-size: 1.5em;
-  font-family: "PT Serif";
+  font-family: "Helvetica";
   padding: 40% 10% 18% 10%;
   min-height: 110vh;
   background-color: var(--primary-dark);
@@ -54,7 +56,7 @@ h1 {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 700px) {
   h1 {
-    font-size: 3.1em;
+    font-size: 2.8em;
     padding: 10% 10% 18% 10%;
   }
 }

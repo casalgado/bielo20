@@ -31,6 +31,7 @@ export default {
   grid-template-columns: 1fr;
   gap: 10%;
   margin: 20px 10% 180px 10%;
+  color: var(--primary-dark);
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -1,12 +1,12 @@
 <template>
   <div class="page">
     <div class="banner-title">
-      <h1 class="title-text">BIELO:</h1>
-      <h1 class="subtitle-text">equipo</h1>
+      <h1 class="title-text">EQUIPO</h1>
     </div>
-    <BannerSingleImage imgName="f1.jpg" title="camilo" />
-    <BannerSingleImage imgName="f2.jpg" title="esteban" />
-    <BannerSingleImage imgName="f3.jpg" title="andres" />
+
+    <BannerSingleImage imgName="d1.jpg" title="camilo" />
+    <BannerSingleImage imgName="d3.jpg" title="esteban" />
+    <BannerSingleImage imgName="d2.jpg" title="andres" />
   </div>
 </template>
 
@@ -21,19 +21,19 @@ export default {
 <style scoped>
 .page {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   max-width: 921px;
   margin: 0 auto;
 }
 
 .banner-title {
-  grid-column: span 1;
+  grid-column: span 3;
 }
 
 .banner-title * {
   color: var(--neutral-light);
-  font-weight: lighter;
+  font-weight: normal;
   float: left;
 }
 

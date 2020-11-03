@@ -9,7 +9,7 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-    <h1 class="walltitle" @click="testState">
+    <h1 class="walltitle">
       HISTORIAS QUE EL MUNDO DEBE ESCUCHAR
     </h1>
     <Wall />
@@ -67,8 +67,8 @@ export default {
 }
 
 .walltitle {
-  font-family: "PT Sans", sans;
-  font-weight: lighter;
+  font-family: "Helvetica";
+  font-weight: bolder;
   z-index: 3;
   background-color: var(--neutral-light);
   margin: 0;
@@ -89,5 +89,15 @@ export default {
   height: 150vh;
   background-color: var(--neutral-light);
   position: absolute;
+}
+
+#custom-bg {
+  width: 100%;
+  background-color: var(--primary-dark);
+  margin: 0px;
+  z-index: 9;
+  position: relative;
+  top: -50px;
+  padding-bottom: 50px;
 }
 </style>
