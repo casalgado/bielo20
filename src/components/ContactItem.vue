@@ -1,6 +1,6 @@
 <template>
   <div class="c-item">
-    <h2>{{ title }}</h2>
+    <h2 id="contact-box">{{ title }}</h2>
     <p v-if="info1">{{ info1 }}</p>
     <p v-if="info2">{{ info2 }}</p>
     <p v-if="info3">{{ info3 }}</p>

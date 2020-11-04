@@ -14,7 +14,7 @@
     </h1>
     <Wall />
     <Banner />
-    <Contact id="contact-box" />
+    <Contact />
     <EmbedFrame />
     <Footer />
   </div>
@@ -85,6 +85,10 @@ export default {
   .walltitle {
     font-size: 3em;
   }
+  .transition-gradient {
+    height: 600px;
+    background-image: linear-gradient(rgba(255, 0, 0, 0), var(--neutral-light));
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -104,7 +108,7 @@ export default {
 }
 
 .transition-gradient {
-  height: 600px;
+  height: 750px;
   background-image: linear-gradient(rgba(255, 0, 0, 0), var(--neutral-light));
 }
 

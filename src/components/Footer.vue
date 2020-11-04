@@ -3,12 +3,6 @@
     <ul class="left">
       <li>Bielo Media</li>
     </ul>
-    <ul class="right">
-      <li>Newsletter</li>
-      <li>Instagram</li>
-      <li>Twitter</li>
-      <li>LinkedIn</li>
-    </ul>
   </div>
 </template>
 

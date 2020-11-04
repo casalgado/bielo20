@@ -103,7 +103,7 @@
           navLinksGreen +
           ')',
       }"
-      @click="scrollTo(contactBox)"
+      @click="scrollTo(4333)"
     >
       Contacto
     </p>
@@ -130,6 +130,7 @@ export default {
       hideWhale: false,
       historyBox: 0,
       contactBox: 0,
+      windowWidth: 0,
     };
   },
   computed: {
@@ -160,13 +161,7 @@ export default {
           ease: "easeIn",
         })
         .delay(1);
-      gsap
-        .to("#logo-animation", {
-          duration: 1,
-          viewBox: "0 0 82 45.63",
-          ease: "easeIn",
-        })
-        .delay(1);
+
       gsap
         .to("#flMask", {
           duration: 1,
@@ -271,6 +266,8 @@ export default {
         startGreen +
         ((linkStartGreen - startGreen) * (opacityEndScroll - positionTwo)) /
           (opacityEndScroll - opacityStartScroll);
+
+      console.log(this.$store.state.scrollPosition);
     },
   },
   created() {
@@ -287,13 +284,19 @@ export default {
     var viewportOffset1 = document
       .getElementById("contact-box")
       .getBoundingClientRect();
-    console.log(viewportOffset1.top);
     this.contactBox = viewportOffset1.top;
     var viewportOffset2 = document
       .getElementById("history-box")
       .getBoundingClientRect();
-    console.log(viewportOffset2.top);
-    this.historyBox = viewportOffset2.top;
+    this.historyBox = viewportOffset2.top - 130;
+
+    // this.windowWidth = window.innerWidth;
+    // if (this.windowWidth < 400) {
+    //   console.log(window.innerWidth);
+    //   this.logoWidth = 180;
+    // } else {
+    //   this.logoWidth = 600;
+    // }
   },
 };
 </script>
@@ -315,6 +318,7 @@ export default {
   color: var(--neutral-light);
   cursor: pointer;
   z-index: 99;
+  font-weight: 500;
 }
 
 .nav-left {
@@ -341,7 +345,7 @@ export default {
 
 #logo-animation {
   position: relative;
-
+  padding-top: 10px;
   cursor: pointer;
   left: 0%;
   top: 250px;
@@ -355,6 +359,7 @@ export default {
 @media only screen and (max-width: 700px) {
   .nav-center {
     padding-top: 20px;
+    max-width: 30%;
   }
 }
 
