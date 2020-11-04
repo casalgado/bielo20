@@ -24,12 +24,13 @@
     <div class="nav-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 177 45.63"
+        viewBox="0 0 92.38 43.63"
         class="vector"
-        id="logo-animation"
+        :class="hideWhale ? 'hide' : 'show'"
+        id="whale"
         v-bind:style="{
-          width: logoWidth + 'px',
-          top: logoTop + 'px',
+          width: '459.7' + 'px',
+          top: logoTop - 60.6 + 'px',
           fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
         }"
       >
@@ -41,54 +42,51 @@
         <title>whale</title>
 
         <path
-          :class="hideWhale ? 'hide' : 'show'"
           mask="url(#whMaskCont)"
           class="cls-1"
           d="M39.58,12.2h-.07C22,12.2,14.86,9.92,11.22,8.6a7.63,7.63,0,0,0,4-6.72c0-4.21-6.93,0-7.36,0S0-2.33,0,1.88A7.62,7.62,0,0,0,5.7,9.25c-2.39,6.14,5,34.38,33.81,34.38.87,0,1.74,0,2.59-.07H92.38V12.2Z"
         />
-        <svg
-          id="full-logo"
-          @click="scrollTo(0)"
-          x="93.5"
-          y="11.75"
-          width="85"
-          height="32.23"
-        >
-          <defs>
-            <mask id="flMaskCont">
-              <rect
-                id="flMask"
-                x="0"
-                y="0"
-                width="22"
-                height="46"
-                fill="#fff"
-              />
-            </mask>
-          </defs>
-          <g mask="url(#flMaskCont)">
-            <path
-              class="logoVector"
-              d="M27.65,14.39a3,3,0,0,1-2.06-.79,2.39,2.39,0,0,1-.88-1.85,2.45,2.45,0,0,1,.88-1.89,3.12,3.12,0,0,1,4.13,0,2.48,2.48,0,0,1,.87,1.89,2.69,2.69,0,0,1-.3,1.13,2.45,2.45,0,0,1-1,1.07A3.17,3.17,0,0,1,27.65,14.39ZM25.09,31.58V15.74h5.15V31.58Z"
-            />
-            <path
-              class="logoVector"
-              d="M32.94,23.76v-.13a8,8,0,0,1,.71-3.38,7.54,7.54,0,0,1,2-2.65,9,9,0,0,1,3-1.69,11.91,11.91,0,0,1,3.74-.58A10.41,10.41,0,0,1,46,16a8.17,8.17,0,0,1,2.87,1.72,7.8,7.8,0,0,1,2.47,5.71l-.07,1.51H38.09a2.8,2.8,0,0,0,.79,1.79,3.84,3.84,0,0,0,1.82,1,8,8,0,0,0,2,.28,7.87,7.87,0,0,0,2-.28A5.75,5.75,0,0,0,47,26.46l3,2.61A10.53,10.53,0,0,1,42.48,32a12.23,12.23,0,0,1-3.85-.58,8.72,8.72,0,0,1-3.05-1.67,7.46,7.46,0,0,1-1.95-2.6A8.06,8.06,0,0,1,32.94,23.76Zm5.22-1.92h8a2.2,2.2,0,0,0-.38-1.12,3.14,3.14,0,0,0-1.34-1.07,4.73,4.73,0,0,0-2-.45,5.35,5.35,0,0,0-2.89.77A2.5,2.5,0,0,0,38.16,21.84Z"
-            />
-            <path
-              class="logoVector"
-              d="M53.79,26.43V9.67h5.15v16a2.09,2.09,0,0,0,.49,1.55,2,2,0,0,0,1.52.49,5,5,0,0,0,1.24-.13v4.15a10.6,10.6,0,0,1-2.45.22,6.52,6.52,0,0,1-4.4-1.35A5.3,5.3,0,0,1,53.79,26.43Z"
-            />
-            <path
-              class="logoVector"
-              d="M63.37,23.66a7.25,7.25,0,0,1,.74-3.23,8.51,8.51,0,0,1,2.08-2.71,9.68,9.68,0,0,1,3.11-1.81,11.22,11.22,0,0,1,7.47,0,10.11,10.11,0,0,1,3.13,1.81A8.4,8.4,0,0,1,82,20.43a7.38,7.38,0,0,1,.74,3.23A7.46,7.46,0,0,1,82,26.9a8.26,8.26,0,0,1-2.09,2.7,9.91,9.91,0,0,1-3.13,1.81,11.06,11.06,0,0,1-7.47,0,9.5,9.5,0,0,1-3.11-1.81,8.37,8.37,0,0,1-2.08-2.7A7.32,7.32,0,0,1,63.37,23.66Zm5.15,0a3.78,3.78,0,0,0,.76,2.3A4,4,0,0,0,71.1,27.4a5.25,5.25,0,0,0,2,.41A5.37,5.37,0,0,0,75,27.4,4.06,4.06,0,0,0,76.82,26a3.78,3.78,0,0,0,.76-2.3,4.28,4.28,0,0,0-.45-1.76,4,4,0,0,0-1.59-1.68,4.82,4.82,0,0,0-5.71.5A3.88,3.88,0,0,0,68.52,23.66Z"
-            />
-            <path
-              class="logoVector"
-              d="M21.64,10.75A10.75,10.75,0,0,0,11,0H0V32.22H10.89a5.39,5.39,0,0,0,.65-10.74A10.76,10.76,0,0,0,21.64,10.75Zm-16,11.49a1.58,1.58,0,1,1,1.6-1.57A1.59,1.59,0,0,1,5.63,22.24Z"
-            />
-          </g>
-        </svg>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82.73 32.23"
+        class="vector"
+        id="just-logo"
+        v-bind:style="{
+          width: logoWidth + 'px',
+          top: logoTop + 'px',
+          'margin-left': logoLeft + 'px',
+          fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
+        }"
+        @click="scrollTo(0)"
+      >
+        <defs>
+          <mask id="flMaskCont">
+            <rect id="flMask" x="0" y="0" width="22" height="35" fill="#fff" />
+          </mask>
+        </defs>
+        <g id="full-logo" mask="url(#flMaskCont)">
+          <path
+            class="logoVector"
+            d="M27.65,14.39a3,3,0,0,1-2.06-.79,2.39,2.39,0,0,1-.88-1.85,2.45,2.45,0,0,1,.88-1.89,3.12,3.12,0,0,1,4.13,0,2.48,2.48,0,0,1,.87,1.89,2.69,2.69,0,0,1-.3,1.13,2.45,2.45,0,0,1-1,1.07A3.17,3.17,0,0,1,27.65,14.39ZM25.09,31.58V15.74h5.15V31.58Z"
+          />
+          <path
+            class="logoVector"
+            d="M32.94,23.76v-.13a8,8,0,0,1,.71-3.38,7.54,7.54,0,0,1,2-2.65,9,9,0,0,1,3-1.69,11.91,11.91,0,0,1,3.74-.58A10.41,10.41,0,0,1,46,16a8.17,8.17,0,0,1,2.87,1.72,7.8,7.8,0,0,1,2.47,5.71l-.07,1.51H38.09a2.8,2.8,0,0,0,.79,1.79,3.84,3.84,0,0,0,1.82,1,8,8,0,0,0,2,.28,7.87,7.87,0,0,0,2-.28A5.75,5.75,0,0,0,47,26.46l3,2.61A10.53,10.53,0,0,1,42.48,32a12.23,12.23,0,0,1-3.85-.58,8.72,8.72,0,0,1-3.05-1.67,7.46,7.46,0,0,1-1.95-2.6A8.06,8.06,0,0,1,32.94,23.76Zm5.22-1.92h8a2.2,2.2,0,0,0-.38-1.12,3.14,3.14,0,0,0-1.34-1.07,4.73,4.73,0,0,0-2-.45,5.35,5.35,0,0,0-2.89.77A2.5,2.5,0,0,0,38.16,21.84Z"
+          />
+          <path
+            class="logoVector"
+            d="M53.79,26.43V9.67h5.15v16a2.09,2.09,0,0,0,.49,1.55,2,2,0,0,0,1.52.49,5,5,0,0,0,1.24-.13v4.15a10.6,10.6,0,0,1-2.45.22,6.52,6.52,0,0,1-4.4-1.35A5.3,5.3,0,0,1,53.79,26.43Z"
+          />
+          <path
+            class="logoVector"
+            d="M63.37,23.66a7.25,7.25,0,0,1,.74-3.23,8.51,8.51,0,0,1,2.08-2.71,9.68,9.68,0,0,1,3.11-1.81,11.22,11.22,0,0,1,7.47,0,10.11,10.11,0,0,1,3.13,1.81A8.4,8.4,0,0,1,82,20.43a7.38,7.38,0,0,1,.74,3.23A7.46,7.46,0,0,1,82,26.9a8.26,8.26,0,0,1-2.09,2.7,9.91,9.91,0,0,1-3.13,1.81,11.06,11.06,0,0,1-7.47,0,9.5,9.5,0,0,1-3.11-1.81,8.37,8.37,0,0,1-2.08-2.7A7.32,7.32,0,0,1,63.37,23.66Zm5.15,0a3.78,3.78,0,0,0,.76,2.3A4,4,0,0,0,71.1,27.4a5.25,5.25,0,0,0,2,.41A5.37,5.37,0,0,0,75,27.4,4.06,4.06,0,0,0,76.82,26a3.78,3.78,0,0,0,.76-2.3,4.28,4.28,0,0,0-.45-1.76,4,4,0,0,0-1.59-1.68,4.82,4.82,0,0,0-5.71.5A3.88,3.88,0,0,0,68.52,23.66Z"
+          />
+          <path
+            class="logoVector"
+            d="M21.64,10.75A10.75,10.75,0,0,0,11,0H0V32.22H10.89a5.39,5.39,0,0,0,.65-10.74A10.76,10.76,0,0,0,21.64,10.75Zm-16,11.49a1.58,1.58,0,1,1,1.6-1.57A1.59,1.59,0,0,1,5.63,22.24Z"
+          />
+        </g>
       </svg>
     </div>
     <p
@@ -116,8 +114,8 @@ export default {
   name: "Navbar",
   data() {
     return {
-      logoWidth: 0,
-      logoTop: 300,
+      logoWidth: 400,
+      logoTop: 250,
       logoLeft: 0,
       opacity: 0,
       navSidesColor: 238,
@@ -139,31 +137,23 @@ export default {
   },
   methods: {
     animate: function() {
-      gsap.to("#logo-animation", {
+      gsap.to(".nav-center", {
         duration: 1,
-        left: "25%",
+        left: "160px",
         ease: "easeIn",
       });
       gsap
-        .to("#logo-animation", {
+        .to(".nav-center", {
           duration: 2,
-          left: "-18%",
+          left: "-200px",
           ease: "easeIn",
         })
         .delay(1);
-      ("0 0 177 45.63");
       gsap
         .to("#whMask", {
           duration: 1,
           width: 0,
           x: 93,
-          ease: "easeIn",
-        })
-        .delay(1);
-      gsap
-        .to("#logo-animation", {
-          duration: 1,
-          viewBox: "0 0 82 45.63",
           ease: "easeIn",
         })
         .delay(1);
@@ -174,12 +164,12 @@ export default {
           ease: "easeOut",
         })
         .delay(1.9);
-      // setTimeout(
-      //   function() {
-      //     this.hideWhale = true;
-      //   }.bind(this),
-      //   2000
-      // );
+      setTimeout(
+        function() {
+          this.hideWhale = true;
+        }.bind(this),
+        2000
+      );
     },
     scrollTo(to) {
       console.log(to);
@@ -201,11 +191,11 @@ export default {
       let opacityEndScroll = 2400;
 
       // width props
-      let maxWidth = 600;
-      let minWidth = 230;
+      let maxWidth = 400;
+      let minWidth = 130;
 
       // top props
-      let maxTop = 300;
+      let maxTop = 250;
       let minTop = 0;
 
       // left props
@@ -224,6 +214,10 @@ export default {
       let linkStartRed = 238;
       let linkStartBlue = 238;
       let linkStartGreen = 238;
+
+      if (this.scroll > 5) {
+        this.hideWhale = true;
+      }
 
       if (this.scroll > maxNavScroll) {
         positionOne = maxNavScroll;
@@ -276,9 +270,9 @@ export default {
   created() {
     if (window.innerwidth < 400) {
       console.log(window.innerWidth);
-      this.logoWidth = 180;
+      this.logoWidth = 200;
     } else {
-      this.logoWidth = 600;
+      this.logoWidth = 400;
     }
   },
   mounted() {
@@ -324,10 +318,7 @@ export default {
 
 .nav-center {
   position: relative;
-}
-
-.nav-center svg {
-  margin: 0 auto;
+  background-color: white;
 }
 
 .nav-right {
@@ -335,20 +326,25 @@ export default {
   margin-right: 25px;
 }
 
+.vector {
+  padding-top: 20px;
+  position: absolute;
+  top: 250px;
+}
+
 .hide {
   display: none;
 }
 
-#logo-animation {
-  position: relative;
-
-  cursor: pointer;
-  left: 0%;
-  top: 250px;
-}
-
 #just-logo {
   cursor: pointer;
+  border: 1px solid blue;
+}
+
+#whale {
+  top: 189.4px;
+  right: 50%;
+  border: 1px solid red;
 }
 
 /* Extra small devices (phones, 600px and down) */
