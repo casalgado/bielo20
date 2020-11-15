@@ -19,7 +19,7 @@
       }"
       @click="scrollTo(historyBox)"
     >
-      Historias
+      {{ mobile ? "H" : "Historias" }}
     </p>
     <div class="nav-center">
       <svg
@@ -65,7 +65,7 @@
             <rect id="flMask" x="0" y="0" width="22" height="35" fill="#fff" />
           </mask>
         </defs>
-        <g id="full-logo" mask="url(#flMaskCont)">
+        <g id="full-logo" :mask="mobile ? '' : 'url(#flMaskCont)'">
           <path
             class="logoVector"
             d="M27.65,14.39a3,3,0,0,1-2.06-.79,2.39,2.39,0,0,1-.88-1.85,2.45,2.45,0,0,1,.88-1.89,3.12,3.12,0,0,1,4.13,0,2.48,2.48,0,0,1,.87,1.89,2.69,2.69,0,0,1-.3,1.13,2.45,2.45,0,0,1-1,1.07A3.17,3.17,0,0,1,27.65,14.39ZM25.09,31.58V15.74h5.15V31.58Z"
@@ -103,7 +103,7 @@
       }"
       @click="scrollTo(contactBox)"
     >
-      Contacto
+      {{ mobile ? "C" : "Contacto" }}
     </p>
   </div>
 </template>
@@ -183,6 +183,7 @@ export default {
   },
   watch: {
     scroll() {
+      console.log(this.scroll);
       let positionOne = this.scroll;
       let positionTwo = this.scroll;
 
@@ -192,7 +193,16 @@ export default {
       let opacityEndScroll = 2400;
 
       // width props
-      let maxWidth = 400;
+      let responsiveWidth;
+      let responsiveLeft;
+      if (this.mobile) {
+        responsiveWidth = 230;
+        responsiveLeft = 50;
+      } else {
+        responsiveWidth = 400;
+        responsiveLeft = 100;
+      }
+      let maxWidth = responsiveWidth;
       let minWidth = 130;
 
       // top props
@@ -201,7 +211,7 @@ export default {
 
       // left props
       let endLeft = 0;
-      let startLeft = 100;
+      let startLeft = responsiveLeft;
 
       // color props logo
       let startRed = 82;
@@ -276,18 +286,31 @@ export default {
     }
   },
   mounted() {
-    this.animate();
+    let responsiveWidth;
+    if (this.mobile) {
+      responsiveWidth = 230;
+      this.hideWhale = true;
+    } else {
+      responsiveWidth = 400;
+    }
+    this.logoWidth = responsiveWidth;
     window.scrollTo(0, 0);
-    var viewportOffset1 = document
-      .getElementById("contact-box")
-      .getBoundingClientRect();
-    //console.log(viewportOffset1.top);
-    this.contactBox = viewportOffset1.top;
-    var viewportOffset2 = document
-      .getElementById("history-box")
-      .getBoundingClientRect();
-    //console.log(viewportOffset2.top);
-    this.historyBox = viewportOffset2.top;
+
+    var home = document.getElementsByTagName("body")[0];
+    console.log(home.getBoundingClientRect());
+
+    var viewportOffset1 = document.getElementById("contact-box");
+    console.log(viewportOffset1.getBoundingClientRect());
+    console.log(document.documentElement.scrollTop);
+    this.contactBox = this.mobile ? 4360 : 9999;
+
+    var viewportOffset2 = document.getElementById("history-box");
+    console.log(viewportOffset2);
+    console.log(viewportOffset2.getBoundingClientRect());
+    this.historyBox = viewportOffset2.getBoundingClientRect().top - 100;
+    if (!this.mobile) {
+      this.animate();
+    }
   },
 };
 </script>
@@ -318,6 +341,7 @@ export default {
 
 .nav-center {
   position: relative;
+  left: -110px;
 }
 
 .nav-right {
