@@ -21,6 +21,7 @@ li {
   list-style-type: none;
   display: inline-block;
   margin-right: 8px;
+  padding-bottom: 15px;
 }
 
 .left {

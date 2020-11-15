@@ -1,7 +1,7 @@
 <template>
   <div class="single">
     <img :src="src" />
-    <div class="overlay" @click="setMediaUrl">
+    <div class="overlay" @click="setMediaUrl" v-if="this.url">
       <img src="../assets/img/speaker.svg" />
     </div>
   </div>
@@ -30,7 +30,7 @@ export default {
     },
     url: {
       type: String,
-      default: () => "liquipedia.net",
+      default: () => null,
     },
   },
   methods: {

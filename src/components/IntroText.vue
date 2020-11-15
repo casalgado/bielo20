@@ -3,12 +3,16 @@
     <div class="gradient"></div>
     <vue-position-sticky :offsetTop="0" id="it">
       <h1 class="intro-text">
-        Somos una productora de podcasts basada en Bogotá, Barranquila y Los
-        Angeles. En Bielo usamos el poder de las historias, creemos en su
-        capacidad de conexión, la fuerza del vínculo que generan y la facilidad
-        que la tecnologia nos brinda para contarlas. Bielo es el centro creativo
-        donde las grandes ideas se encuentran con impecable producción para
-        contar las historias que el mundo debe escuchar.
+        Somos una productora de podcasts basada en Bogotá, Barranquilla y Los
+        Angeles. <br /><br />
+
+        En Bielo usamos el poder de las historias, creemos en su capacidad de
+        conexión, la fuerza del vínculo que generan y la facilidad que la
+        tecnologia nos brinda para contarlas.
+        <br /><br />
+        Bielo es el centro creativo donde las grandes ideas se encuentran con
+        impecable producción para contar las historias que el mundo debe
+        escuchar.
       </h1>
     </vue-position-sticky>
   </div>
@@ -56,7 +60,7 @@ h1 {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 700px) {
   h1 {
-    font-size: 2.8em;
+    font-size: 2.3em;
     padding: 10% 10% 18% 10%;
   }
 }

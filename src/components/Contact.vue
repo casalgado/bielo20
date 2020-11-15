@@ -1,10 +1,6 @@
 <template>
   <div class="contact">
-    <ContactItem
-      title="Contacto"
-      info1="Andres Vergara"
-      info2="info@bielomedia.io"
-    />
+    <ContactItem title="Contacto" info1="info@bielomedia.io" />
     <ContactItemForm
       title="Mensaje Directo"
       info1="Cuentanos Algo"

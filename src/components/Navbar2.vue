@@ -128,6 +128,7 @@ export default {
       hideWhale: false,
       historyBox: 0,
       contactBox: 0,
+      mobile: false,
     };
   },
   computed: {
@@ -215,7 +216,7 @@ export default {
       let linkStartBlue = 238;
       let linkStartGreen = 238;
 
-      if (this.scroll > 5) {
+      if (this.scroll > 2) {
         this.hideWhale = true;
       }
 
@@ -268,11 +269,10 @@ export default {
     },
   },
   created() {
-    if (window.innerwidth < 400) {
-      console.log(window.innerWidth);
-      this.logoWidth = 200;
-    } else {
-      this.logoWidth = 400;
+    let wwidth = parseInt(window.innerWidth);
+    if (wwidth < 400) {
+      console.log("mobile");
+      this.mobile = true;
     }
   },
   mounted() {
@@ -281,12 +281,12 @@ export default {
     var viewportOffset1 = document
       .getElementById("contact-box")
       .getBoundingClientRect();
-    console.log(viewportOffset1.top);
+    //console.log(viewportOffset1.top);
     this.contactBox = viewportOffset1.top;
     var viewportOffset2 = document
       .getElementById("history-box")
       .getBoundingClientRect();
-    console.log(viewportOffset2.top);
+    //console.log(viewportOffset2.top);
     this.historyBox = viewportOffset2.top;
   },
 };
@@ -318,7 +318,6 @@ export default {
 
 .nav-center {
   position: relative;
-  background-color: white;
 }
 
 .nav-right {
@@ -338,13 +337,11 @@ export default {
 
 #just-logo {
   cursor: pointer;
-  border: 1px solid blue;
 }
 
 #whale {
   top: 189.4px;
   right: 50%;
-  border: 1px solid red;
 }
 
 /* Extra small devices (phones, 600px and down) */

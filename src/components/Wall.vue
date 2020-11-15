@@ -8,20 +8,24 @@
     <WallSingleImage
       imgName="portada_ueo.png"
       title=""
-      url="https://open.spotify.com/embed-podcast/episode/2aIJ55hgHzgkTJHhPv2DO6"
+      url="https://open.spotify.com/embed-podcast/episode/6TsSdVObjKkIJNTY9fdJS2"
     />
     <WallSingleImage
       imgName="portada_ec.jpg"
       title=""
-      url="https://open.spotify.com/embed-podcast/episode/2KoL7lxc04awzNXme1W5mn"
+      url="https://player.captivate.fm/show/68e9db85-5a88-4003-8fc4-7e9ddc941753/latest/"
     />
-    <WallSingleImage imgName="four.jpg" title="TEXTILES" />
     <WallSingleImage
-      imgName="five.jpg"
+      imgName="portada_be.png"
+      title=""
+      url="https://open.spotify.com/embed-podcast/show/4KHqi5zsLY5rBcKXW4oIfJ"
+    />
+    <WallSingleImage
+      imgName="portada_mk.jpg"
       title=""
       description="alimentacion para el planeta"
     />
-    <WallSingleImage imgName="six.jpg" title="DELIVERY 2.0" />
+    <WallSingleImage imgName="portada_hz.png" title="" />
   </div>
 </template>
 

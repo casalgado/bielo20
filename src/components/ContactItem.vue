@@ -5,6 +5,16 @@
     <p v-if="info2">{{ info2 }}</p>
     <p v-if="info3">{{ info3 }}</p>
     <p v-if="info4">{{ info4 }}</p>
+    <img
+      src="../assets/img/linkedin.svg"
+      @click="
+        openLink('https://www.linkedin.com/in/info-bielo-media-0399251bb')
+      "
+    />
+    <img
+      src="../assets/img/instagram.svg"
+      @click="openLink('https://www.instagram.com/bielomedia/')"
+    />
   </div>
 </template>
 
@@ -33,6 +43,11 @@ export default {
       default: () => null,
     },
   },
+  methods: {
+    openLink: function(link) {
+      window.open(link, "_blank");
+    },
+  },
 };
 </script>
 
@@ -50,6 +65,15 @@ h2 {
 p {
   font-size: 1.4em;
   margin-top: 10px;
+  padding-top: 10px;
   margin-bottom: 0px;
+}
+
+img {
+  width: 25px;
+  float: left;
+  padding-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 </style>

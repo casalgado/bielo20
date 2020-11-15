@@ -15,7 +15,7 @@
         :disabled="sent"
         :class="sent ? 'msg-sent' : ''"
       >
-        {{ sent ? "mensaje enviado" : "enviar" }}
+        {{ text }}
       </button>
     </form>
   </div>
@@ -50,6 +50,7 @@ export default {
   data() {
     return {
       sent: false,
+      text: "enviar",
       client: {
         name: "",
         email: "",
@@ -60,6 +61,7 @@ export default {
   },
   methods: {
     sendEmail() {
+      this.text = "enviando...";
       console.log(emailjs);
       console.log(this.client);
       let serviceID = "gmail";
@@ -76,6 +78,7 @@ export default {
           function(response) {
             console.log("SUCCESS!", response.status, response.text);
             this.sent = true;
+            this.text = "mensaje enviado";
           }.bind(this),
           function(error) {
             console.log("FAILED...", error);

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar2";
 import Landing from "@/components/Landing";
 import Wall from "@/components/Wall";
 import Banner from "@/components/Banner";
@@ -69,7 +69,7 @@ export default {
 
 .walltitle {
   font-family: "Helvetica";
-  font-weight: bolder;
+  font-weight: normal;
   z-index: 3;
   background-color: var(--neutral-light);
   margin: 0;
