@@ -14,7 +14,7 @@
     </h1>
     <Wall />
     <Banner />
-    <Contact />
+    <Contact id="contact-box" />
     <EmbedFrame />
     <Footer />
   </div>

@@ -19,7 +19,34 @@
       }"
       @click="scrollTo(historyBox)"
     >
-      {{ mobile ? "H" : "Historias" }}
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        class="logoNav"
+        x="0px"
+        y="0px"
+        width="25px"
+        height="21.9px"
+        viewBox="0 0 25 21.9"
+        style="enable-background:new 0 0 25 21.9;"
+        xml:space="preserve"
+        v-bind:style="{
+          fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
+        }"
+      >
+        <path
+          class="st0"
+          d="M25,9.9c-0.1-1.7-0.6-3.2-1.5-4.6c-1.2-1.8-2.8-3-4.8-3.9c-2-0.9-4-1.3-6.4-1.3c-0.9,0-1.9,0.1-2.9,0.3
+	c-1.7,0.4-3.4,1-4.8,2C3.1,3.3,1.8,4.6,1,6.2c-1.1,2.1-1.3,4.4-0.5,6.7c0.4,1.4,1.2,2.5,2.2,3.6c0.1,0.1,0.1,0.1,0.1,0.3
+	c-0.3,1-0.7,1.8-1.2,2.7c-0.4,0.6-0.9,1.3-1.4,1.8C0,21.3,0,21.5,0.1,21.7c0.1,0.2,0.2,0.2,0.4,0.2c0.9,0,1.7-0.1,2.6-0.4
+	c1.5-0.4,2.9-1.1,4.1-2.1c0.1-0.1,0.2-0.1,0.3,0c2.4,0.9,4.8,1.1,7.3,0.7c1.5-0.2,2.9-0.6,4.3-1.3c1.7-0.9,3.2-2,4.3-3.6
+	C24.5,13.7,25.1,11.9,25,9.9z M11.7,5.2c0.2,0,0.5,0,0.7,0c0.2,0,0.5,0,0.7,0c0.3,0,0.5,0.2,0.4,0.5c0,0.7-0.1,1.4-0.1,2.1
+	c-0.1,0.8-0.1,1.7-0.2,2.5c0,0.3,0,0.5-0.1,0.8c0,0.2-0.2,0.4-0.4,0.4c-0.3,0-0.6,0-0.8,0c-0.2,0-0.4-0.2-0.4-0.4
+	c-0.1-1.2-0.2-2.4-0.2-3.6c0-0.5-0.1-1.1-0.1-1.6c0-0.1,0-0.1,0-0.2C11.3,5.4,11.5,5.2,11.7,5.2z M12.5,15c-0.7,0-1.2-0.5-1.2-1.2
+	c0-0.6,0.5-1.1,1.2-1.1c0.7,0,1.2,0.5,1.2,1.2C13.7,14.4,13.1,15,12.5,15z"
+        />
+      </svg>
     </p>
     <div class="nav-center">
       <svg
@@ -103,7 +130,46 @@
       }"
       @click="scrollTo(contactBox)"
     >
-      {{ mobile ? "C" : "Contacto" }}
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="21.9px"
+        class="logoNav"
+        height="25px"
+        viewBox="0 0 21.9 25"
+        style="enable-background:new 0 0 21.9 25;"
+        xml:space="preserve"
+        v-bind:style="{
+          fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
+        }"
+      >
+        <g>
+          <path
+            class="st0"
+            d="M0,12.5C0,9.1,0,5.7,0,2.4C0,1,1,0,2.4,0c5.2,0,10.4,0,15.6,0c1.3,0,2.3,1,2.4,2.3c0,0.8,0,1.5,0,2.3
+		c0,0.1,0,0.2,0.2,0.2c0.3,0,0.5,0,0.8,0c0.4,0,0.6,0.2,0.6,0.6c0,0.6,0,1.3,0,1.9c0,0.3-0.3,0.6-0.6,0.6c-0.3,0-0.6,0-0.8,0
+		c-0.1,0-0.1,0-0.1,0.1c0,1,0,1.9,0,2.9c0,0.1,0,0.1,0.1,0.1c0.3,0,0.6,0,0.8,0c0.4,0,0.6,0.2,0.6,0.6c0,0.7,0,1.3,0,2
+		c0,0.3-0.3,0.6-0.6,0.6c-0.3,0-0.6,0-0.8,0c-0.1,0-0.1,0-0.1,0.1c0,0.9,0,1.9,0,2.8c0,0.1,0,0.1,0.1,0.1c0.3,0,0.5,0,0.8,0
+		c0.4,0,0.6,0.2,0.6,0.6c0,0.6,0,1.3,0,1.9c0,0.3-0.3,0.6-0.6,0.6c-0.3,0-0.6,0-0.8,0c-0.1,0-0.1,0-0.1,0.1c0,0.7,0,1.4,0,2.2
+		c0,1.2-0.8,2.2-2,2.4c-0.1,0-0.2,0-0.3,0c-5.2,0-10.4,0-15.6,0c-1.1,0-2.1-0.8-2.3-1.9c0-0.2,0-0.3,0-0.5C0,19.2,0,15.9,0,12.5z
+		M18,12.5c0-3.3,0-6.7,0-10c0-0.1,0-0.2-0.2-0.2c-5.1,0-10.2,0-15.3,0c-0.2,0-0.2,0-0.2,0.2c0,6.7,0,13.3,0,20c0,0.2,0,0.2,0.2,0.2
+		c5.1,0,10.2,0,15.3,0c0.1,0,0.2,0,0.2-0.2C18,19.2,18,15.8,18,12.5z"
+          />
+          <path
+            class="st0"
+            d="M10.1,18.8c-1.5,0-2.9,0-4.4,0c-0.3,0-0.5-0.1-0.7-0.2c-0.2-0.2-0.3-0.4-0.4-0.6c0-0.4,0-0.9,0-1.3
+		c0.1-0.7,0.4-1.3,1-1.8c0.7-0.6,1.5-0.8,2.4-0.8c0.2,0,0.3,0.1,0.5,0.1c1,0.3,2.1,0.4,3.1,0c1.2-0.4,3.2,0.3,3.7,1.7
+		c0.1,0.2,0.2,0.5,0.2,0.8c0,0.4,0,0.8,0,1.2c0,0.4-0.3,0.6-0.7,0.8c-0.1,0.1-0.3,0.1-0.4,0.1C13.1,18.7,11.6,18.8,10.1,18.8z"
+          />
+          <path
+            class="st0"
+            d="M10.2,6.3c1.7,0,3.1,1.4,3.1,3.2c0,1.7-1.4,3.1-3.1,3.1C8.4,12.5,7,11.1,7,9.3C7.1,7.6,8.5,6.2,10.2,6.3z"
+          />
+        </g>
+      </svg>
     </p>
   </div>
 </template>
@@ -280,7 +346,7 @@ export default {
   },
   created() {
     let wwidth = parseInt(window.innerWidth);
-    if (wwidth < 400) {
+    if (wwidth < 500) {
       console.log("mobile");
       this.mobile = true;
     }
@@ -300,9 +366,9 @@ export default {
     console.log(home.getBoundingClientRect());
 
     var viewportOffset1 = document.getElementById("contact-box");
+    console.log(viewportOffset1);
     console.log(viewportOffset1.getBoundingClientRect());
-    console.log(document.documentElement.scrollTop);
-    this.contactBox = this.mobile ? 4360 : 9999;
+    this.contactBox = this.mobile ? 4380 : 9999;
 
     var viewportOffset2 = document.getElementById("history-box");
     console.log(viewportOffset2);
@@ -332,6 +398,10 @@ export default {
   color: var(--neutral-light);
   cursor: pointer;
   z-index: 99;
+}
+
+.logoNav {
+  cursor: pointer;
 }
 
 .nav-left {
@@ -389,5 +459,12 @@ export default {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+}
+
+img {
+  width: 25px;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
 }
 </style>
