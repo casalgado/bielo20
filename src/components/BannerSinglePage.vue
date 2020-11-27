@@ -5,8 +5,8 @@
     </div>
 
     <BannerSingleImage imgName="d1.jpg" title="camilo" position="creativo" />
-    <BannerSingleImage imgName="d3.jpg" title="esteban" position="produccion" />
-    <BannerSingleImage imgName="d2.jpg" title="andres" position="innovacion" />
+    <BannerSingleImage imgName="d3.jpg" title="esteban" position="producción" />
+    <BannerSingleImage imgName="d2.jpg" title="andres" position="innovación" />
   </div>
 </template>
 
