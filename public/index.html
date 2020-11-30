@@ -9,12 +9,33 @@
   </head>
   <body>
     <noscript>
-      <strong
-        >We're sorry but BieloMedia doesn't work properly without JavaScript
-        enabled. Please enable it to continue.</strong
-      >
+      <strong>Bielomedia. Historias que el mundo debe escuhar.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyD-fw5mQAHNy_Gw857SBET0-3PVYUGMZf4",
+        authDomain: "bielo20.firebaseapp.com",
+        databaseURL: "https://bielo20.firebaseio.com",
+        projectId: "bielo20",
+        storageBucket: "bielo20.appspot.com",
+        messagingSenderId: "1034512020286",
+        appId: "1:1034512020286:web:215f26d634bfe5add3b26f",
+        measurementId: "G-B9NHTS9WDR",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>

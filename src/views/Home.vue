@@ -29,6 +29,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import IntroText from "@/components/IntroText";
 import EmbedFrame from "@/components/EmbedFrame";
+import { firebase } from "@/firebase";
 export default {
   name: "Home",
   components: {
@@ -56,6 +57,7 @@ export default {
 
   mounted() {
     window.scrollTo(0, 0);
+    firebase.analytics().logEvent("page_view");
   },
 };
 </script>
