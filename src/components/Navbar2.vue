@@ -32,7 +32,14 @@
         style="enable-background:new 0 0 25 21.9;"
         xml:space="preserve"
         v-bind:style="{
-          fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
+          fill:
+            'rgb(' +
+            navLinksRed +
+            ', ' +
+            navLinksBlue +
+            ', ' +
+            navLinksGreen +
+            ')',
         }"
       >
         <path
@@ -143,7 +150,14 @@
         style="enable-background:new 0 0 21.9 25;"
         xml:space="preserve"
         v-bind:style="{
-          fill: 'rgb(' + logoRed + ', ' + logoBlue + ', ' + logoGreen + ')',
+          fill:
+            'rgb(' +
+            navLinksRed +
+            ', ' +
+            navLinksBlue +
+            ', ' +
+            navLinksGreen +
+            ')',
         }"
       >
         <g>
