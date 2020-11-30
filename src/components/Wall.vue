@@ -16,7 +16,7 @@
       url="https://player.captivate.fm/show/68e9db85-5a88-4003-8fc4-7e9ddc941753/latest/"
     />
     <WallSingleImage
-      imgName="portada_be.png"
+      imgName="portada_bn.jpg"
       title=""
       url="https://open.spotify.com/embed-podcast/show/4KHqi5zsLY5rBcKXW4oIfJ"
     />

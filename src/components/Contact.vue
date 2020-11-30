@@ -3,10 +3,10 @@
     <ContactItem title="Contacto" info1="info@bielomedia.io" />
     <ContactItemForm
       title="Mensaje Directo"
-      info1="Cuentanos Algo"
+      info1="Cuéntanos Algo"
       info2="Nombre"
       info3="Correo"
-      info4="Telefono"
+      info4="Teléfono"
     />
   </div>
 </template>

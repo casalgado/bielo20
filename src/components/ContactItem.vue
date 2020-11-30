@@ -7,9 +7,7 @@
     <p v-if="info4">{{ info4 }}</p>
     <img
       src="../assets/img/linkedin.svg"
-      @click="
-        openLink('https://www.linkedin.com/in/info-bielo-media-0399251bb')
-      "
+      @click="openLink('https://www.linkedin.com/company/bielo-media')"
     />
     <img
       src="../assets/img/instagram.svg"

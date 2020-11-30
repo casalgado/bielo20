@@ -4,7 +4,7 @@
       <h1 class="title-text">EQUIPO</h1>
     </div>
 
-    <BannerSingleImage imgName="d1.jpg" title="camilo" position="creativo" />
+    <BannerSingleImage imgName="d1.png" title="camilo" position="creativo" />
     <BannerSingleImage imgName="d3.jpg" title="esteban" position="producción" />
     <BannerSingleImage imgName="d2.jpg" title="andres" position="innovación" />
   </div>

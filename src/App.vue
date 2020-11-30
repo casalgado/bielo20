@@ -15,7 +15,16 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@font-face {
+  font-family: "Agrandir";
+  src: url("./assets/agrandir/Agrandir-Medium.woff2") format("woff2"),
+    url("./assets/agrandir/Agrandir-Medium.woff") format("woff"),
+    url("./assets/agrandir/Agrandir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0px;
 }

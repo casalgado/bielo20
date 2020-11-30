@@ -2,18 +2,20 @@
   <div>
     <div class="gradient"></div>
     <vue-position-sticky :offsetTop="0" id="it">
-      <h1 class="intro-text">
-        Somos una productora de podcasts basada en Bogotá, Barranquilla y Los
-        Angeles. <br /><br />
+      <div id="txt-cont">
+        <h1 class="intro-text">
+          Somos una productora de podcasts basada en <br />Bogotá y Los Ángeles.
+          <br /><br />
 
-        En Bielo usamos el poder de las historias, creemos en su capacidad de
-        conexión, la fuerza del vínculo que generan y la facilidad que la
-        tecnologia nos brinda para contarlas.
-        <br /><br />
-        Bielo es el centro creativo donde las grandes ideas se encuentran con
-        impecable producción para contar las historias que el mundo debe
-        escuchar.
-      </h1>
+          En Bielo usamos el poder de las historias, creemos en su capacidad de
+          conexión, la fuerza del vínculo que generan y la facilidad que la
+          tecnología nos brinda para contarlas.
+          <br /><br />
+          Bielo es el centro creativo donde las grandes ideas se encuentran con
+          impecable producción para contar las historias que el mundo debe
+          escuchar.
+        </h1>
+      </div>
     </vue-position-sticky>
   </div>
 </template>
@@ -25,13 +27,17 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-weight: lighter;
-  font-size: 1.5em;
-  font-family: "Helvetica";
-  padding: 40% 10% 18% 10%;
-  min-height: 110vh;
+#txt-cont {
   background-color: var(--primary-dark);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.5em;
+  padding: 40% 10% 18% 10%;
+  font-family: "Agrandir";
+  font-weight: 500;
+  font-style: normal;
   color: var(--neutral-light);
   margin: 0;
 }
@@ -60,8 +66,8 @@ h1 {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 700px) {
   h1 {
-    font-size: 2.3em;
-    padding: 10% 10% 18% 10%;
+    font-size: 2em;
+    padding: 15% 10% 18% 10%;
   }
 }
 
