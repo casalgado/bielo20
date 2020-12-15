@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style scoped>
+.title-text {
+  font-family: "Agrandir";
+}
+
 .page {
   display: grid;
   grid-template-columns: 1fr;

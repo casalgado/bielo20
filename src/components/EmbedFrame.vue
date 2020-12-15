@@ -69,6 +69,8 @@ export default {
       }
       if (this.src.includes("spotify")) {
         this.iframeHeight = 150;
+      } else if (this.src.includes("megaphone")) {
+        this.iframeHeight = 200;
       } else {
         this.iframeHeight = 170;
       }

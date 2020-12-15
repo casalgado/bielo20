@@ -1,8 +1,12 @@
 <template>
   <div class="single">
     <img :src="src" />
-    <div class="overlay" @click="setMediaUrl" v-if="this.url">
-      <img src="../assets/img/speaker.svg" />
+    <div
+      @click="setMediaUrl"
+      :class="this.url ? 'overlay' : 'overlay disabled'"
+    >
+      <img v-if="this.url" src="../assets/img/speaker.svg" />
+      <img v-else src="../assets/img/soon.svg" />
     </div>
   </div>
 </template>
@@ -35,7 +39,9 @@ export default {
   },
   methods: {
     setMediaUrl: function() {
-      this.$store.commit("setMediaUrl", this.url);
+      if (this.url) {
+        this.$store.commit("setMediaUrl", this.url);
+      }
     },
   },
   computed: {
@@ -85,6 +91,10 @@ img {
 .overlay:hover {
   opacity: 0.9;
   cursor: pointer;
+}
+
+.disabled:hover {
+  cursor: default;
 }
 
 /* Extra small devices (phones, 600px and down) */

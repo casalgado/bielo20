@@ -18,14 +18,14 @@
     <WallSingleImage
       imgName="portada_bn.jpg"
       title=""
-      url="https://open.spotify.com/embed-podcast/show/4KHqi5zsLY5rBcKXW4oIfJ"
+      url="https://playlist.megaphone.fm?e=BLO8565380552"
     />
     <WallSingleImage
       imgName="portada_mk.jpg"
       title=""
-      description="alimentacion para el planeta"
+      url="https://open.spotify.com/embed-podcast/episode/1d12hQOIs9onUuPnP9Momv"
     />
-    <WallSingleImage imgName="portada_hz.png" title="" />
+    <WallSingleImage imgName="portada_vc.png" title="" />
   </div>
 </template>
 

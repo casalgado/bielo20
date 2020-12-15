@@ -70,7 +70,7 @@ export default {
 }
 
 .walltitle {
-  font-family: "Helvetica";
+  font-family: "Agrandir";
   font-weight: normal;
   z-index: 3;
   background-color: var(--neutral-light);

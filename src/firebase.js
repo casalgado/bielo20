@@ -1,7 +1,7 @@
 import firebase from "firebase";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyD-fw5mQAHNy_Gw857SBET0-3PVYUGMZf4",
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
   authDomain: "bielo20.firebaseapp.com",
   databaseURL: "https://bielo20.firebaseio.com",
   projectId: "bielo20",
