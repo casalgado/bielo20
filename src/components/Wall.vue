@@ -30,7 +30,7 @@
       title=""
       url="https://playlist.megaphone.fm?e=BLO4600962525"
     />
-    <WallSingleImage imgName="portada_vc.png" title="" />
+    <WallSingleImage imgName="portada_mpf2.png" title="" />
   </div>
 </template>
 
