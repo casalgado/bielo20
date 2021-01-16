@@ -8,12 +8,12 @@
     <WallSingleImage
       imgName="portada_abdp.jpg"
       title=""
-      url="https://player.captivate.fm/show/fa34297a-c538-4b83-9fbe-f2985d1d164e/latest/"
+      url="https://playlist.megaphone.fm?e=BLO7893471211"
     />
     <WallSingleImage
       imgName="portada_ec.jpg"
       title=""
-      url="https://player.captivate.fm/show/68e9db85-5a88-4003-8fc4-7e9ddc941753/latest/"
+      url="https://playlist.megaphone.fm?e=BLO7828826121"
     />
     <WallSingleImage
       imgName="portada_bn.jpg"
@@ -24,6 +24,11 @@
       imgName="portada_mk.jpg"
       title=""
       url="https://open.spotify.com/embed-podcast/episode/1d12hQOIs9onUuPnP9Momv"
+    />
+    <WallSingleImage
+      imgName="portada_jdc.jpg"
+      title=""
+      url="https://playlist.megaphone.fm?e=BLO4600962525"
     />
     <WallSingleImage imgName="portada_vc.png" title="" />
   </div>
