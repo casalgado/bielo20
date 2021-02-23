@@ -2,14 +2,20 @@
   <div class="c-item">
     <h2 @click="sendEmail">{{ title }}</h2>
     <form id="contact-form">
-      <input v-model="client.name" :disabled="sent" :placeholder="info2" />
-      <input v-model="client.email" :disabled="sent" :placeholder="info3" />
-      <input v-model="client.phone" :disabled="sent" :placeholder="info4" />
       <textarea
         v-model="client.comment"
         :disabled="sent"
         :placeholder="info1"
       />
+      <input v-model="client.name" :disabled="sent" :placeholder="info2" />
+      <input v-model="client.email" :disabled="sent" :placeholder="info3" />
+      <input
+        v-model="client.phone"
+        :disabled="sent"
+        :placeholder="info4"
+        class="phone-input"
+      />
+
       <button
         @click.stop.prevent="sendEmail"
         :disabled="sent"
@@ -147,5 +153,9 @@ p {
   font-size: 1.4em;
   margin-top: 10px;
   margin-bottom: 0px;
+}
+
+.phone-input {
+  padding-bottom: 25px;
 }
 </style>

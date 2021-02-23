@@ -2,8 +2,8 @@
   <div class="contact">
     <ContactItem title="Contacto" info1="info@bielomedia.io" />
     <ContactItemForm
-      title="Mensaje Directo"
-      info1="Cuéntanos Algo"
+      title="Queremos Contar Tu Historia"
+      info1="Escríbenos para más información"
       info2="Nombre"
       info3="Correo"
       info4="Teléfono"
