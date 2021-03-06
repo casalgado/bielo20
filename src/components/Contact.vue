@@ -1,12 +1,12 @@
 <template>
   <div class="contact">
-    <ContactItem title="Contacto" info1="info@bielomedia.io" />
+    <ContactItem :title="title()" info1="info@bielomedia.io" />
     <ContactItemForm
-      title="Queremos Contar Tu Historia"
-      info1="Escríbenos para más información"
-      info2="Nombre"
-      info3="Correo"
-      info4="Teléfono"
+      :title="title2()"
+      :info1="info1()"
+      :info2="info2()"
+      :info3="info3()"
+      :info4="info4()"
     />
   </div>
 </template>
@@ -17,6 +17,30 @@ import ContactItemForm from "./ContactItemForm";
 export default {
   name: "Contact",
   components: { ContactItem, ContactItemForm },
+  methods: {
+    title: function() {
+      return this.$store.state.lang == "es" ? "Contacto" : "Contact";
+    },
+    title2: function() {
+      return this.$store.state.lang == "es"
+        ? "Queremos Contar Tu Historia"
+        : "Let Us Help You Tell Your Story";
+    },
+    info1: function() {
+      return this.$store.state.lang == "es"
+        ? "Escríbenos para más información"
+        : "Contact us for more information";
+    },
+    info2: function() {
+      return this.$store.state.lang == "es" ? "Nombre" : "Name";
+    },
+    info3: function() {
+      return this.$store.state.lang == "es" ? "Correo" : "Email";
+    },
+    info4: function() {
+      return this.$store.state.lang == "es" ? "Telefono" : "Phone";
+    },
+  },
 };
 </script>
 

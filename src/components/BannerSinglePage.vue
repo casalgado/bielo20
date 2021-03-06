@@ -1,12 +1,29 @@
 <template>
   <div class="page">
     <div class="banner-title">
-      <h1 class="title-text">EQUIPO</h1>
+      <h1 v-if="lang == 'es'" class="title-text">
+        EQUIPO
+      </h1>
+      <h1 v-else class="title-text">
+        OUR TEAM
+      </h1>
     </div>
 
-    <BannerSingleImage imgName="d1.png" title="camilo" position="creativo" />
-    <BannerSingleImage imgName="d3.jpg" title="esteban" position="producción" />
-    <BannerSingleImage imgName="d2.jpg" title="andres" position="innovación" />
+    <BannerSingleImage
+      imgName="d1.png"
+      title="camilo"
+      :position="position(0)"
+    />
+    <BannerSingleImage
+      imgName="d3.jpg"
+      title="esteban"
+      :position="position(1)"
+    />
+    <BannerSingleImage
+      imgName="d2.jpg"
+      title="andres"
+      :position="position(2)"
+    />
   </div>
 </template>
 
@@ -15,6 +32,20 @@ import BannerSingleImage from "@/components/BannerSingleImage";
 export default {
   name: "Banner",
   components: { BannerSingleImage },
+  computed: {
+    lang: function() {
+      return this.$store.state.lang;
+    },
+  },
+  methods: {
+    position(p) {
+      if (this.lang == "es") {
+        return ["creativo", "producción", "innovación"][p];
+      } else {
+        return ["creation", "production", "innovation"][p];
+      }
+    },
+  },
 };
 </script>
 

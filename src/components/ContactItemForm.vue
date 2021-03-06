@@ -21,7 +21,7 @@
         :disabled="sent"
         :class="sent ? 'msg-sent' : ''"
       >
-        {{ text }}
+        {{ text() }}
       </button>
     </form>
   </div>
@@ -56,7 +56,6 @@ export default {
   data() {
     return {
       sent: false,
-      text: "enviar",
       client: {
         name: "",
         email: "",
@@ -66,6 +65,9 @@ export default {
     };
   },
   methods: {
+    text() {
+      return this.$store.state.lang == "es" ? "enviar" : "send";
+    },
     sendEmail() {
       this.text = "enviando...";
       console.log(emailjs);

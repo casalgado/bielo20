@@ -4,6 +4,8 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuePositionSticky from "vue-position-sticky";
+import FlagIcon from "vue-flag-icon";
+Vue.use(FlagIcon);
 
 Vue.use(vuePositionSticky);
 

@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     scrollPosition: 0,
     mediaUrl: "",
+    lang: "es",
   },
   mutations: {
     setScroll(state, scroll) {
@@ -14,6 +15,13 @@ export default new Vuex.Store({
     },
     setMediaUrl(state, url) {
       state.mediaUrl = url;
+    },
+    toggleLanguage(state) {
+      if (state.lang == "es") {
+        state.lang = "gb";
+      } else {
+        state.lang = "es";
+      }
     },
   },
   actions: {},

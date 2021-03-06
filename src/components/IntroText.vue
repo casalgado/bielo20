@@ -3,7 +3,7 @@
     <div class="gradient"></div>
     <vue-position-sticky :offsetTop="0" id="it">
       <div id="txt-cont">
-        <h1 class="intro-text">
+        <h1 v-if="lang == 'es'" class="intro-text">
           Somos una productora de podcasts basada en <br />Bogotá y Los Ángeles.
           <br /><br />
 
@@ -15,6 +15,16 @@
           impecable producción para contar las historias que el mundo debe
           escuchar.
         </h1>
+        <h1 v-else class="intro-text">
+          We are a podcast production company based between <br />Bogota and Los
+          Angeles. <br /><br />
+
+          We believe in the power of storytelling, trusting its power to connect
+          through technology to reach a wider audience.
+          <br /><br />
+          Bielo is a creative platform where great ideas meet an impeccable
+          production and stories that the world needs to hear are born
+        </h1>
       </div>
     </vue-position-sticky>
   </div>
@@ -23,6 +33,11 @@
 <script>
 export default {
   name: "IntroText",
+  computed: {
+    lang: function() {
+      return this.$store.state.lang;
+    },
+  },
 };
 </script>
 

@@ -1,5 +1,8 @@
 <template>
   <div class="home" id="home">
+    <div id="flag-cont" @click="toggleLanguage">
+      <flag id="flag" :iso="lang" />
+    </div>
     <Navbar />
     <Landing />
     <IntroText />
@@ -9,8 +12,11 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-    <h1 id="history-box" class="walltitle">
+    <h1 v-if="lang == 'es'" id="history-box" class="walltitle">
       HISTORIAS QUE EL MUNDO DEBE ESCUCHAR
+    </h1>
+    <h1 v-else id="history-box" class="walltitle">
+      STORIES THE WORLD NEEDS TO HEAR
     </h1>
     <Wall />
     <Banner />
@@ -45,9 +51,18 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    lang() {
+      return this.$store.state.lang;
+    },
+  },
   methods: {
     handleScroll() {
       this.$store.commit("setScroll", window.pageYOffset);
+    },
+    toggleLanguage() {
+      console.log("ht");
+      this.$store.commit("toggleLanguage");
     },
   },
 
@@ -129,5 +144,19 @@ export default {
   position: relative;
   top: -50px;
   padding-bottom: 50px;
+}
+
+#flag {
+  z-index: 999;
+}
+
+#flag-cont {
+  position: fixed;
+  cursor: pointer;
+  width: 30px;
+  top: 23px;
+  left: 60px;
+  z-index: 999;
+  padding: 10px 5px 10px 5px;
 }
 </style>
