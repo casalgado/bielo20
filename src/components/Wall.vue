@@ -8,7 +8,7 @@
     <WallSingleImage
       imgName="portada_abdp.jpg"
       title=""
-      url="https://playlist.megaphone.fm?e=BLO7893471211"
+      url="https://playlist.megaphone.fm?p=BLO8331418360"
     />
     <WallSingleImage
       imgName="portada_ec.jpg"

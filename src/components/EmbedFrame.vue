@@ -71,6 +71,9 @@ export default {
         this.iframeHeight = 150;
       } else if (this.src.includes("megaphone")) {
         this.iframeHeight = 200;
+        if (this.src.includes("BLO8331418360")) {
+          this.iframeHeight = 400;
+        }
       } else {
         this.iframeHeight = 170;
       }
