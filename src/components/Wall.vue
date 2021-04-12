@@ -8,7 +8,7 @@
     <WallSingleImage
       imgName="portada_abdp.jpg"
       title=""
-      url="https://playlist.megaphone.fm?p=BLO8331418360"
+      url="https://playlist.megaphone.fm?e=BLO2651701391"
     />
     <WallSingleImage
       imgName="portada_ec.jpg"
@@ -30,7 +30,16 @@
       title=""
       url="https://playlist.megaphone.fm?e=BLO4600962525"
     />
-    <WallSingleImage imgName="portada_mpf2.png" title="" />
+    <WallSingleImage
+      imgName="portada_mpf.jpg"
+      title=""
+      url="https://open.spotify.com/embed-podcast/episode/47FrAzH4uQkuu27ak6ve28"
+    />
+    <WallSingleImage
+      imgName="portada_tg.png"
+      title=""
+      url="https://open.spotify.com/embed-podcast/episode/6KsSYzEXLP7QaiAxcIYrgI"
+    />
   </div>
 </template>
 

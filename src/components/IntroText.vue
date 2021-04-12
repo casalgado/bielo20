@@ -16,14 +16,16 @@
           escuchar.
         </h1>
         <h1 v-else class="intro-text">
-          We are a podcast production company based between <br />Bogota and Los
-          Angeles. <br /><br />
+          We are a podcast production company based in <br />Bogotá, Colombia
+          and Los Angeles, CA. <br /><br />
 
-          We believe in the power of storytelling, trusting its power to connect
-          through technology to reach a wider audience.
+          At Bielo we believe in the ability of stories to connect people, the
+          strength of the bond they generate, and the power of technology to
+          create them.
+
           <br /><br />
-          Bielo is a creative platform where great ideas meet an impeccable
-          production and stories that the world needs to hear are born
+          Bielo is the creative center where great ideas <br />meet impeccable
+          production to tell the stories <br />the world should listen.
         </h1>
       </div>
     </vue-position-sticky>
@@ -49,7 +51,7 @@ export default {
 
 h1 {
   font-size: 1.5em;
-  padding: 40% 10% 18% 10%;
+  padding: 40% 5% 18% 5%;
   font-family: "Agrandir";
   font-weight: 500;
   font-style: normal;
