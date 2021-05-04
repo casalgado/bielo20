@@ -11,11 +11,6 @@
       url="https://playlist.megaphone.fm?e=BLO2651701391"
     />
     <WallSingleImage
-      imgName="portada_ec.jpg"
-      title=""
-      url="https://playlist.megaphone.fm?e=BLO7828826121"
-    />
-    <WallSingleImage
       imgName="portada_bn.jpg"
       title=""
       url="https://playlist.megaphone.fm?e=BLO8565380552"
