@@ -29,7 +29,7 @@
         width="25px"
         height="21.9px"
         viewBox="0 0 25 21.9"
-        style="enable-background:new 0 0 25 21.9;"
+        style="enable-background: new 0 0 25 21.9"
         xml:space="preserve"
         v-bind:style="{
           fill:
@@ -147,7 +147,7 @@
         class="logoNav"
         height="25px"
         viewBox="0 0 21.9 25"
-        style="enable-background:new 0 0 21.9 25;"
+        style="enable-background: new 0 0 21.9 25"
         xml:space="preserve"
         v-bind:style="{
           fill:
@@ -217,7 +217,7 @@ export default {
     },
   },
   methods: {
-    animate: function() {
+    animate: function () {
       gsap.to(".nav-center", {
         duration: 1,
         left: "160px",
@@ -246,14 +246,13 @@ export default {
         })
         .delay(1.9);
       setTimeout(
-        function() {
+        function () {
           this.hideWhale = true;
         }.bind(this),
         2000
       );
     },
     scrollTo(to) {
-      console.log(to);
       window.scroll({
         top: to,
         left: 0,
@@ -263,7 +262,6 @@ export default {
   },
   watch: {
     scroll() {
-      console.log(this.scroll);
       let positionOne = this.scroll;
       let positionTwo = this.scroll;
 
