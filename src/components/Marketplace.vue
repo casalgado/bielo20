@@ -3,7 +3,6 @@
     <div class="hide">
       <h1 v-if="lang == 'es'" class="title-text">TALLER DE FILOSOFIA</h1>
       <h1 v-else class="title-text">PHILOSOPHY WORKSHOP</h1>
-      {{ testApi }}
       <div class="marketplace-grid">
         <div class="image-cont">
           <img src="../assets/img/urbietorbilogo.png" alt="" />
@@ -20,18 +19,52 @@
         </div>
       </div>
     </div>
-    <div class="button-cont" @click="testPayU">
-      <div class="button">.</div>
+    <div>
+      <div>{{ sign("input") }}</div>
+      <form
+        method="post"
+        action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu"
+        ref="form"
+      >
+        <input name="merchantId" type="hidden" value="508029" />
+        <input name="ApiKey" type="hidden" value="4Vj8eK4rloUd272L48hsrarnUA" />
+        <input name="accountId" type="hidden" value="512326" />
+        <input name="description" type="hidden" value="Test PAYU" />
+        <input name="referenceCode" type="hidden" :value="referenceCode" />
+        <input name="amount" type="hidden" :value="amount" />
+        <input name="tax" type="hidden" value="0" />
+        <input name="taxReturnBase" type="hidden" value="0" />
+        <input name="currency" type="hidden" :value="currency" />
+        <input name="signature" type="hidden" :value="signature" />
+        <input name="test" type="hidden" value="1" />
+        <input name="buyerEmail" type="hidden" value="test@test.com" />
+        <input name="responseUrl" type="hidden" value="http://localhost:8080" />
+        <input
+          name="confirmationUrl"
+          type="hidden"
+          value="http://www.test.com/confirmation"
+        />
+        <div class="button-cont" @click="submit">
+          <div class="button">Inscripciones abiertas</div>
+        </div>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
+import moment from "moment";
+import md5 from "js-md5";
 export default {
   name: "Marketplace",
   data() {
     return {
-      testApi: "a",
+      merchantId: 508029,
+      accountId: 512326,
+      referenceCode: "",
+      amount: 3,
+      currency: "USD",
+      signature: "",
     };
   },
   computed: {
@@ -40,34 +73,47 @@ export default {
     },
   },
   methods: {
+    submit: function () {
+      this.referenceCode = this.createCode();
+      let input = `4Vj8eK4rloUd272L48hsrarnUA~${this.merchantId}~${this.referenceCode}~${this.amount}~${this.currency}`;
+      this.signature = this.sign(input);
+      console.log(this.$refs.form);
+      console.log(this.referenceCode);
+      console.log(this.signature);
+      setTimeout(
+        function () {
+          this.$refs.form.submit();
+        }.bind(this),
+        0
+      );
+    },
     testPayUfetch: function () {
-      let init = {
-        method: "POST",
-      };
-      fetch(
-        "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/",
-        init
-      ).then((response) => {
-        this.testApi = response;
-        console.log("response");
-        console.log(response);
-      });
+      let key = process.env.VUE_APP_PAYU_API_KEY;
+      console.log(key);
+    },
+    sign(input) {
+      return md5(input);
+    },
+    createCode() {
+      console.log(moment().format("X"));
+      return this.sign(moment().format("X"));
     },
     testPayU: function () {
       let data = {
-        merchantId: 508029,
-        ApiKey: "4Vj8eK4rloUd272L48hsrarnUA",
-        referenceCode: "TestPayU",
-        accountId: "512326",
-        description: "Test PAYU",
-        amount: 3,
-        tax: 0,
-        taxReturnBase: 0,
-        currency: "USD",
-        signature: "ba9ffa71559580175585e45ce70b6c37",
-        test: 1,
-        buyerEmail: "test@test.com",
+        merchantId: 918167,
+        accountId: 925331,
+        description: "",
+        referenceCode: "",
+        amount: "",
+        tax: "",
+        taxReturnBase: "",
+        currency: "",
+        signature: "",
+        test: "",
+        buyerEmail: "",
+        responseUrl: "",
       };
+
       console.log("test");
       this.axios({
         method: "post",
@@ -81,7 +127,6 @@ export default {
           },
         ],
       }).then((response) => {
-        this.testApi = response;
         console.log("response");
         console.log(response);
       });
@@ -167,12 +212,13 @@ export default {
 }
 
 .button-cont {
-  color: var(--primary-dark);
-  background-color: var(--primary-neutral);
+  color: var(--neutral-light);
+  background-color: var(--primary-dark);
   border-radius: 50px;
   padding: 5px 15px 5px 15px;
   display: table;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .Abutton-cont:hover {

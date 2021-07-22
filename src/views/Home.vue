@@ -69,7 +69,12 @@ export default {
       this.$store.commit("toggleLanguage");
     },
   },
-
+  beforeCreate() {
+    console.log(this.$route.query);
+    if (this.$route.query.merchantId == "508029") {
+      this.$router.push({ name: "estado", params: this.$route.query });
+    }
+  },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
