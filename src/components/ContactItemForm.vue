@@ -83,12 +83,12 @@ export default {
       };
       if (!this.sent) {
         emailjs.send(serviceID, templateID, templateParams, userID).then(
-          function(response) {
+          function (response) {
             console.log("SUCCESS!", response.status, response.text);
             this.sent = true;
             this.text = "mensaje enviado";
           }.bind(this),
-          function(error) {
+          function (error) {
             console.log("FAILED...", error);
           }
         );
@@ -117,12 +117,14 @@ h2 {
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: transparent;
-  border: none;
+  border: 1px solid rgba(82, 45, 91, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #contact-form textarea::placeholder,
 #contact-form input::placeholder {
-  color: var(--primary-dark);
+  color: rgba(82, 45, 91, 0.5);
 }
 
 #contact-form input::placeholder:focus {
@@ -139,6 +141,7 @@ h2 {
   color: var(--neutral-light);
   background-color: var(--primary-dark);
   cursor: pointer;
+  margin-top: 15px;
 }
 
 #contact-form button:hover {
@@ -155,9 +158,5 @@ p {
   font-size: 1.4em;
   margin-top: 10px;
   margin-bottom: 0px;
-}
-
-.phone-input {
-  padding-bottom: 25px;
 }
 </style>

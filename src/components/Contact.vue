@@ -18,26 +18,26 @@ export default {
   name: "Contact",
   components: { ContactItem, ContactItemForm },
   methods: {
-    title: function() {
+    title: function () {
       return this.$store.state.lang == "es" ? "Contacto" : "Contact";
     },
-    title2: function() {
+    title2: function () {
       return this.$store.state.lang == "es"
         ? "Queremos Contar Tu Historia"
         : "Let Us Help You Tell Your Story";
     },
-    info1: function() {
+    info1: function () {
       return this.$store.state.lang == "es"
         ? "Escríbenos para más información"
         : "Contact us for more information";
     },
-    info2: function() {
+    info2: function () {
       return this.$store.state.lang == "es" ? "Nombre" : "Name";
     },
-    info3: function() {
+    info3: function () {
       return this.$store.state.lang == "es" ? "Correo" : "Email";
     },
-    info4: function() {
+    info4: function () {
       return this.$store.state.lang == "es" ? "Telefono" : "Phone";
     },
   },

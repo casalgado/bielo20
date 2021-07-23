@@ -12,7 +12,6 @@
         <div class="background-white"></div>
       </vue-position-sticky>
     </div>
-    <Marketplace />
     <h1 v-if="lang == 'es'" id="history-box" class="walltitle">
       HISTORIAS QUE EL MUNDO DEBE ESCUCHAR
     </h1>
@@ -20,7 +19,7 @@
       STORIES THE WORLD NEEDS TO HEAR
     </h1>
     <Wall />
-
+    <Marketplace />
     <Banner />
     <Contact id="contact-box" />
     <EmbedFrame />

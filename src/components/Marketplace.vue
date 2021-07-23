@@ -20,12 +20,22 @@
       </div>
     </div>
     <div>
-      <div>{{ sign("input") }}</div>
       <form
         method="post"
         action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu"
         ref="form"
       >
+        <label for="fn">Nombre Completo:</label>
+        <input name="payerFullName" id="fn" value="carlos alberto" />
+        <label for="cc">Cedula:</label>
+        <input name="payerDocument" id="cc" value="123456" />
+        <label for="mp">Telefono:</label>
+        <input name="mobilePhone" id="mp" value="123456" />
+        <label for="em">Correo:</label>
+        <input name="buyerEmail" id="em" value="test@test.com" />
+        <label for="cc">Dirección:</label>
+        <input name="billingAddress" label="dir" value="123456" />
+
         <input name="merchantId" type="hidden" value="508029" />
         <input name="ApiKey" type="hidden" value="4Vj8eK4rloUd272L48hsrarnUA" />
         <input name="accountId" type="hidden" value="512326" />
@@ -37,7 +47,6 @@
         <input name="currency" type="hidden" :value="currency" />
         <input name="signature" type="hidden" :value="signature" />
         <input name="test" type="hidden" value="1" />
-        <input name="buyerEmail" type="hidden" value="test@test.com" />
         <input name="responseUrl" type="hidden" value="http://localhost:8080" />
         <input
           name="confirmationUrl"
@@ -45,7 +54,7 @@
           value="http://www.test.com/confirmation"
         />
         <div class="button-cont" @click="submit">
-          <div class="button">Inscripciones abiertas</div>
+          <div class="button">Pagar</div>
         </div>
       </form>
     </div>
@@ -132,50 +141,11 @@ export default {
       });
     },
   },
-  mounted() {
-    /* 
-    let data = {
-        merchantId: "508029",
-        accountId: "512321",
-        description: "Test PAYU",
-        referenceCode: "TestPayU",
-        amount: "20000",
-        tax: "3193",
-        taxReturnBase: "16806",
-        currency: "COP",
-        signature: "7ee7cf808ce6a39b17481c54f2c57acc",
-        test: "0",
-        buyerFullName: "testo test",
-        buyerEmail: "test@test.com",
-        responseUrl: "http://www.test.com/response",
-        confirmationUrl: "http://www.test.com/confirmation",
-      };
-
-    let data = {
-        merchantId: 508029,
-        ApiKey: "4Vj8eK4rloUd272L48hsrarnUA",
-        referenceCode: "TestPayU",
-        accountId: 512326,
-        description: "Test PAYU",
-        amount: 3,
-        tax: 0,
-        taxReturnBase: 0,
-        currency: "USD",
-        signature: "ba9ffa71559580175585e45ce70b6c37",
-        test: 1,
-        buyerEmail: "test@test.com",
-      };
-    */
-  },
+  mounted() {},
 };
 </script>
 
 <style scoped>
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 .hide {
   display: none;
 }
@@ -221,7 +191,7 @@ export default {
   cursor: pointer;
 }
 
-.Abutton-cont:hover {
+.button-cont:hover {
   background-color: var(--primary-accent);
 }
 
@@ -229,5 +199,18 @@ export default {
   display: table-cell;
   vertical-align: middle;
   padding-top: 5px;
+}
+
+input {
+  font-family: "Pt sans";
+  color: var(--primary-dark);
+  width: 100%;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: transparent;
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>

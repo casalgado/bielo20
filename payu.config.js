@@ -1,3 +1,49 @@
+<form
+  method="post"
+  action="https://checkout.payulatam.com/ppp-web-gateway-payu/"
+>
+  <input name="payerFullName" label="Nombre Completo" value="carlos alberto" />
+  <input name="buyerEmail" label="Correo Electronico" value="test@test.com" />
+  <input name="payerDocument" label="Cedula" value="123456" />
+  <input name="merchantId" type="hidden" value="918167" />
+  <input name="accountId" type="hidden" value="925331" />
+  <input name="description" type="hidden" value="Test PAYU" />
+  <input name="referenceCode" type="hidden" value="Test1" />
+  <input name="amount" type="hidden" value="20000" />
+  <input name="tax" type="hidden" value="3193" />
+  <input name="taxReturnBase" type="hidden" value="16806" />
+  <input name="currency" type="hidden" value="COP" />
+  <input
+    name="signature"
+    type="hidden"
+    value="af7beb18dfcd82f080c52ddc295d8e59"
+  />
+  <input name="test" type="hidden" value="0" />
+  <input name="buyerEmail" type="hidden" value="test@test.com" />
+  <input
+    name="responseUrl"
+    type="hidden"
+    value="http://www.test.com/response"
+  />
+  <input
+    name="confirmationUrl"
+    type="hidden"
+    value="http://www.test.com/confirmation"
+  />
+  <input name="Submit" type="submit" value="Enviar" />
+</form>;
+/*
+piu necesita: 
+Nombre
+Cedula
+Teléfono
+Correo
+Dirección
+*/
+
+let test = "Test: https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/";
+let live = "Live: https://checkout.payulatam.com/ppp-web-gateway-payu/";
+
 let form = {
   merchantId: 918167,
   accountId: 925331,
@@ -27,37 +73,3 @@ let data = {
   test: 1,
   buyerEmail: "test@test.com",
 };
-
-(<form
-  method="post"
-  action="https://checkout.payulatam.com/ppp-web-gateway-payu/"
->
-  <input name="merchantId" type="hidden" value="918167" />
-  <input name="accountId" type="hidden" value="925331" />
-  <input name="description" type="hidden" value="Test PAYU" />
-  <input name="referenceCode" type="hidden" value="Test1" />
-  <input name="amount" type="hidden" value="20000" />
-  <input name="tax" type="hidden" value="3193" />
-  <input name="taxReturnBase" type="hidden" value="16806" />
-  <input name="currency" type="hidden" value="COP" />
-  <input
-    name="signature"
-    type="hidden"
-    value="af7beb18dfcd82f080c52ddc295d8e59"
-  />
-  <input name="test" type="hidden" value="0" />
-  <input name="buyerEmail" type="hidden" value="test@test.com" />
-  <input
-    name="responseUrl"
-    type="hidden"
-    value="http://www.test.com/response"
-  />
-  <input
-    name="confirmationUrl"
-    type="hidden"
-    value="http://www.test.com/confirmation"
-  />
-  <input name="Submit" type="submit" value="Enviar" />
-</form>)("Test: https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/");
-
-("Live: https://checkout.payulatam.com/ppp-web-gateway-payu/");
