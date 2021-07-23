@@ -89,11 +89,7 @@
             <input name="currency" type="hidden" :value="currency" />
             <input name="signature" type="hidden" :value="signature" />
             <input name="test" type="hidden" value="1" />
-            <input
-              name="responseUrl"
-              type="hidden"
-              value="http://localhost:8080"
-            />
+            <input name="responseUrl" type="hidden" value="www.bielomedia.io" />
             <input
               name="confirmationUrl"
               type="hidden"
