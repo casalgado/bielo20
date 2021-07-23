@@ -8,12 +8,19 @@
         <td class="c2">{{ params[name] }}</td>
       </tr>
     </table>
-    <button @click="print">a</button>
+    <div class="icon-cont">
+      <span @click="print"><i class="fas fa-save fa-2x icon"></i></span>
+      <!-- <span class="icon" @click="print"><i class="fas fa-print fa-2x"></i></span> -->
+      <span @click="$router.push({ name: 'home' })"
+        ><i class="fas fa-home fa-2x icon"></i
+      ></span>
+    </div>
   </div>
 </template>
 
 <script>
 import AuxNav from "../components/AuxNav.vue";
+
 export default {
   name: "Estado",
   components: { AuxNav },
@@ -62,6 +69,18 @@ export default {
   text-align: right;
 }
 
+.icon-cont {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.icon {
+  cursor: pointer;
+}
+
 table {
   margin: 0 auto;
   background-color: var(--primary-dark);
@@ -72,5 +91,18 @@ table {
 
 tr {
   padding: 5px 0px 5px 0px;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+  .icon-cont {
+    display: none;
+  }
+  table {
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+  }
 }
 </style>
