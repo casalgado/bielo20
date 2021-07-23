@@ -32,7 +32,7 @@
               @click="show('.register')"
               :class="showRegister ? 'disable' : ''"
             >
-              <div class="button">Inscripciones abiertas</div>
+              <div class="button">Inscribete</div>
             </div>
             <div
               class="button-cont"
@@ -47,12 +47,12 @@
       <div class="marketplace-grid register">
         <div class="info_container">
           <h4>
-            Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de 1
-            sesión de preguntas, respuestas y discusión (1 hora)
+            Dos sesiones virtuales: <br />1 sesión expositiva (2 horas), seguida
+            de 1 sesión de preguntas, respuestas y discusión (1 hora)
           </h4>
           <h4>
-            Fechas: 7 de agosto (sesión expositiva de 2 horas) y 14 de agosto
-            (sesión de discusión de 1 hora)
+            Fechas: sabado 7 de agosto (sesión expositiva) y sabado 14 de agosto
+            (sesión de discusión)
           </h4>
           <h4>Hora: 10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid</h4>
           <h4>Costo: $150,000 COP</h4>
@@ -65,17 +65,16 @@
             ref="form"
           >
             <label for="fn">Nombre Completo:</label>
-            <input name="payerFullName" id="fn" value="carlos alberto" />
+            <input name="payerFullName" id="fn" value="" />
             <label for="cc">Cedula:</label>
-            <input name="payerDocument" id="cc" value="123456" />
+            <input name="payerDocument" id="cc" value="" />
             <label for="mp">Telefono:</label>
-            <input name="mobilePhone" id="mp" value="123456" />
+            <input name="mobilePhone" id="mp" value="" />
             <label for="em">Correo:</label>
-            <input name="buyerEmail" id="em" value="test@test.com" />
+            <input name="buyerEmail" id="em" value="" />
             <label for="cc">Dirección:</label>
-            <input name="billingAddress" label="dir" value="123456" />
-
-            <input name="merchantId" type="hidden" value="508029" />
+            <input name="billingAddress" label="dir" value="" />
+            <input name="merchantId" type="hidden" value="" />
             <input
               name="ApiKey"
               type="hidden"
