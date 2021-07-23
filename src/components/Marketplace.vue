@@ -74,7 +74,7 @@
             <input name="buyerEmail" id="em" value="" />
             <label for="cc">Dirección:</label>
             <input name="billingAddress" label="dir" value="" />
-            <input name="merchantId" type="hidden" value="" />
+            <input name="merchantId" type="hidden" value="508029" />
             <input
               name="ApiKey"
               type="hidden"
