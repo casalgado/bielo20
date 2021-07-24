@@ -161,7 +161,7 @@ export default {
       referenceCode: "",
       apiKey: "",
       description: "Taller de Lectura Urbi et Orbi",
-      amount: 12000,
+      amount: 150000,
       currency: "COP",
       signature: "",
       target_height: "800px",
