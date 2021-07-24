@@ -70,7 +70,7 @@ export default {
   },
   beforeCreate() {
     console.log(this.$route.query);
-    if (this.$route.query.merchantId == "508029") {
+    if (this.$route.query.merchantId) {
       this.$router.push({ name: "estado", params: this.$route.query });
     }
   },

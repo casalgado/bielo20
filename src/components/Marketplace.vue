@@ -61,7 +61,7 @@
         <div class="right-side">
           <form
             method="post"
-            action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu"
+            action="https://checkout.payulatam.com/ppp-web-gateway-payu"
             ref="form"
           >
             <label for="fn">Nombre Completo:</label>
@@ -74,21 +74,21 @@
             <input name="buyerEmail" id="em" value="" />
             <label for="cc">Dirección:</label>
             <input name="billingAddress" label="dir" value="" />
-            <input name="merchantId" type="hidden" value="508029" />
+            <input name="merchantId" type="hidden" :value="merchantId" />
             <input
               name="ApiKey"
               type="hidden"
               value="4Vj8eK4rloUd272L48hsrarnUA"
             />
-            <input name="accountId" type="hidden" value="512326" />
-            <input name="description" type="hidden" value="Test PAYU" />
+            <input name="accountId" type="hidden" :value="accountId" />
+            <input name="description" type="hidden" :value="description" />
             <input name="referenceCode" type="hidden" :value="referenceCode" />
             <input name="amount" type="hidden" :value="amount" />
             <input name="tax" type="hidden" value="0" />
             <input name="taxReturnBase" type="hidden" value="0" />
             <input name="currency" type="hidden" :value="currency" />
             <input name="signature" type="hidden" :value="signature" />
-            <input name="test" type="hidden" value="1" />
+            <input name="test" type="hidden" value="0" />
             <input
               name="responseUrl"
               type="hidden"
@@ -156,11 +156,13 @@ export default {
   name: "Marketplace",
   data() {
     return {
-      merchantId: 508029,
-      accountId: 512326,
+      merchantId: 918167,
+      accountId: 925331,
       referenceCode: "",
-      amount: 3,
-      currency: "USD",
+      apiKey: "",
+      description: "Taller de Lectura Urbi et Orbi",
+      amount: 12000,
+      currency: "COP",
       signature: "",
       target_height: "800px",
       mobile: false,
@@ -189,7 +191,7 @@ export default {
 
     submit: function () {
       this.referenceCode = this.createCode();
-      let input = `4Vj8eK4rloUd272L48hsrarnUA~${this.merchantId}~${this.referenceCode}~${this.amount}~${this.currency}`;
+      let input = `${this.apiKey}~${this.merchantId}~${this.referenceCode}~${this.amount}~${this.currency}`;
       this.signature = this.sign(input);
       console.log(this.$refs.form);
       console.log(this.referenceCode);
@@ -254,6 +256,7 @@ export default {
     }
   },
   mounted() {
+    this.apiKey = process.env.VUE_APP_PAYU_API_KEY;
     if (this.mobile) {
       this.target_height = "800px";
     } else {
