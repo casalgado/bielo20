@@ -1,5 +1,6 @@
 <template>
   <div class="marketplace">
+    <!-- div is hidden with css -->
     <div class="">
       <h1 v-if="lang == 'es'" class="title-text">
         LA LIBERTAD Y EL RESENTIMIENTO
@@ -288,6 +289,7 @@ export default {
   color: var(--primary-dark);
   z-index: 5;
   font-family: "Agrandir";
+  display: none;
 }
 
 .image-cont {
