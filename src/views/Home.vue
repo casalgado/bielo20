@@ -19,7 +19,6 @@
       STORIES THE WORLD NEEDS TO HEAR
     </h1>
     <Wall />
-    <Marketplace />
     <Banner />
     <Contact id="contact-box" />
     <EmbedFrame />
@@ -36,7 +35,6 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import IntroText from "@/components/IntroText";
 import EmbedFrame from "@/components/EmbedFrame";
-import Marketplace from "@/components/Marketplace";
 import { firebase } from "@/firebase";
 export default {
   name: "Home",
@@ -49,7 +47,6 @@ export default {
     Footer,
     IntroText,
     EmbedFrame,
-    Marketplace,
   },
   data() {
     return {};
