@@ -19,6 +19,11 @@ const routes = [
     name: "estado",
     component: () => import("../views/Estado.vue"),
   },
+  {
+    path: "/single",
+    name: "single",
+    component: () => import("../views/SinglePodcast.vue"),
+  },
 ];
 
 const router = new VueRouter({

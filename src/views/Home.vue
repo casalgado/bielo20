@@ -77,7 +77,7 @@ export default {
 
   mounted() {
     window.scrollTo(0, 0);
-    firebase.analytics().logEvent("page_view");
+    firebase.analytics().logEvent("goal_completion", { name: "lever_puzzle" });
   },
 };
 </script>
