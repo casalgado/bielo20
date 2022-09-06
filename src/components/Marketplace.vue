@@ -3,12 +3,12 @@
     <!-- div is hidden with css -->
     <div class="">
       <h1 v-if="lang == 'es'" class="title-text">
-        LA LIBERTAD Y EL RESENTIMIENTO
+        La libertad de la voluntad y el concepto de persona
       </h1>
       <h1 v-else class="title-text">FREEDOM AND RESENTMENT</h1>
       <div class="marketplace-grid">
         <div class="image-cont dos_caminos">
-          <img src="../assets/img/dos_caminos.jpg" alt="" />
+          <img src="../assets/img/club2.png" alt="" />
         </div>
         <div class="right-side">
           <p>
@@ -17,24 +17,25 @@
             coraje y muchas ganas de aprender, pensar y dialogar.
           </p>
           <p>
-            Filosofar no es cuestión de memorizar nombres, fechas o incluso
-            teorías enteras. Se trata más bien de aprender a pensar con claridad
-            en los conceptos y precisión en las palabras. Y no hay mejor manera
-            de hacerlo que a través de la lectura y el diálogo.
-          </p>
-          <p>
             Con David y Octavio como guías, recorremos los vericuetos de textos
             icónicos de la filosofía para entender las ideas que los hacen
             memorables.
           </p>
+          <p>
+            No nos crean a nosotros; créanle a quienes nos han acompañado en
+            nuestros talleres anteriores. En una escala de 1 a 10, donde 10 es
+            que volverían a inscribirse “a ojo cerrado”, nuestro promedio va en
+            9.9.
+          </p>
+
           <div class="marketplace-grid">
-            <div
+            <!-- <div
               class="button-cont"
               @click="show('.register')"
               :class="showRegister ? 'disable' : ''"
             >
               <div class="button">Inscribete</div>
-            </div>
+            </div> -->
             <div
               class="button-cont"
               @click="show('.more_information')"
@@ -48,15 +49,15 @@
       <div class="marketplace-grid register">
         <div class="info_container">
           <h4>
-            Dos sesiones virtuales: <br />1 sesión expositiva (2 horas), seguida
-            de 1 sesión de preguntas, respuestas y discusión (1 hora)
+            Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de 1
+            sesión de preguntas, respuestas y discusión (2 horas)
           </h4>
           <h4>
-            Fechas: sabado 7 de agosto (sesión expositiva) y sabado 14 de agosto
-            (sesión de discusión)
+            Fechas: 24 de septiembre (sesión expositiva de 2 horas) y 1 de
+            octubre (sesión de discusión de 2 horas)
           </h4>
           <h4>Hora: 10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid</h4>
-          <h4>Costo: $150,000 COP</h4>
+          <h4>Costo: $200,000 COP (IVA incluido)</h4>
           <p>Cupos limitados.</p>
         </div>
         <div class="right-side">
@@ -108,10 +109,10 @@
       </div>
       <div class="marketplace-grid more_information">
         <div class="quote_container">
-          <h3>
+          <!-- <h3>
             “Definitivamente fue la mejor manera de aproximarse a leer a un
             autor como Nietzsche, de la mano de David y Octavio.”
-          </h3>
+          </h3> -->
           <h3>
             “La pasé súper, me divertí mucho y redescubrí mi amor por la
             filosofía.”
@@ -125,21 +126,20 @@
         </div>
         <div class="right-side">
           <p>
-            “La libertad y el resentimiento” es tal vez el ensayo de filosofía
-            moral más importante del siglo XX. A pesar de su brevedad (consta de
-            unas 25 páginas), con este texto Strawson transformó el debate sobre
-            el libre albedrío y el determinismo. ¿Es acaso posible tratarnos
-            unos a otros como seres libres y responsables, como sujetos de
-            admiración o sanción, si el devenir del mundo está plenamente
-            determinado por la causalidad natural?
+            «La libertad de la voluntad y el concepto de persona» es tal vez el
+            más célebre ensayo filosófico de Harry Frankfurt, uno de los
+            filósofos contemporáneos preferidos de David. En él Frankfurt
+            examina un de las ideas más comunes sobre la libertad, la de que una
+            persona ha obrado en libertad solamente en la medida en que hubiera
+            podido obrar de manera distinta de cómo en efecto lo ha hecho.
           </p>
           <p>
-            Vamos a adentrarnos en una de las más apasionantes discusiones de la
-            filosofía, sobre la posibilidad misma de la libertad humana.
+            Con este memorable y muy corto ensayo, queremos explorar la cuestión
+            fundamental y apasionante de la libertad humana.
           </p>
           <p>
             Las personas inscritas podrán acceder a una copia digital del ensayo
-            de Strawson en español y, para quienes lo deseen, una copia del
+            de Frankfurt en español y, para quienes lo deseen, una copia del
             original en inglés también.
           </p>
         </div>
@@ -289,7 +289,6 @@ export default {
   color: var(--primary-dark);
   z-index: 5;
   font-family: "Agrandir";
-  display: none;
 }
 
 .image-cont {
@@ -397,5 +396,9 @@ label {
 
 .hide {
   display: none;
+}
+
+.title-text {
+  text-transform: uppercase;
 }
 </style>
