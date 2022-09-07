@@ -29,30 +29,32 @@
           </p>
 
           <div class="marketplace-grid">
-            <div class="button-cont" @click="stripe">
-              <div class="button">Inscribete</div>
-            </div>
+            <!-- <div
+                class="button-cont"
+                @click="show('.register')"
+                :class="showRegister ? 'disable' : ''"
+              >
+                <div class="button">Inscribete</div>
+              </div> -->
             <div
               class="button-cont"
               @click="show('.more_information')"
-              :class="`${showMoreInformation ? 'disable' : ''} ${
-                this.expanded ? 'hide' : ''
-              }`"
+              :class="showMoreInformation ? 'disable' : ''"
             >
               <div class="button">Más información</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="marketplace-grid register hide">
+      <div class="marketplace-grid register">
         <div class="info_container">
           <h4>
-            Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de<br />
-            1 sesión de preguntas, respuestas y discusión (2 horas)
+            Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de 1
+            sesión de preguntas, respuestas y discusión (2 horas)
           </h4>
           <h4>
-            Fechas: <br />24 de septiembre (sesión expositiva de 2 horas) y
-            <br />1 de octubre (sesión de discusión de 2 horas)
+            Fechas: 24 de septiembre (sesión expositiva de 2 horas) y 1 de
+            octubre (sesión de discusión de 2 horas)
           </h4>
           <h4>Hora: 10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid</h4>
           <h4>Costo: $200,000 COP (IVA incluido)</h4>
@@ -60,7 +62,6 @@
         </div>
         <div class="right-side">
           <form
-            class="hide"
             method="post"
             action="https://checkout.payulatam.com/ppp-web-gateway-payu"
             ref="form"
@@ -104,29 +105,25 @@
               <div class="button">Reservar Cupo</div>
             </div>
           </form>
-          <div class="button-cont form-button" @click="stripe">
-            <div class="button">Reservar Cupo</div>
-          </div>
         </div>
       </div>
-      <div
-        class="marketplace-grid more_information"
-        :class="this.expanded ? 'show' : ''"
-      >
-        <div class="info_container">
-          <h4>
-            Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de<br />
-            1 sesión de preguntas, respuestas y discusión (2 horas)
-          </h4>
-          <h4>
-            Fechas: <br />24 de septiembre (sesión expositiva de 2 horas) y
-            <br />1 de octubre (sesión de discusión de 2 horas)
-          </h4>
-          <h4>Hora: 10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid</h4>
-          <h4>Costo: $200,000 COP (IVA incluido)</h4>
-          <p>Cupos limitados.</p>
+      <div class="marketplace-grid more_information">
+        <div class="quote_container">
+          <!-- <h3>
+              “Definitivamente fue la mejor manera de aproximarse a leer a un
+              autor como Nietzsche, de la mano de David y Octavio.”
+            </h3> -->
+          <h3>
+            “La pasé súper, me divertí mucho y redescubrí mi amor por la
+            filosofía.”
+          </h3>
+          <h3>
+            “Una disciplina tan densa, casi inabordable para legos, la comprendí
+            y me apasioné por ella. La lucidez de David y la capacidad de
+            comunicación de Octavio crean una mezcla de la cual uno se siente
+            parte.”
+          </h3>
         </div>
-
         <div class="right-side">
           <p>
             «La libertad de la voluntad y el concepto de persona» es tal vez el
@@ -146,22 +143,6 @@
             original en inglés también.
           </p>
         </div>
-        <!-- <div class="quote_container span2">
-          <h3>
-            “Definitivamente fue la mejor manera de aproximarse a leer a un
-            autor como Nietzsche, de la mano de David y Octavio.”
-          </h3>
-          <h3>
-            “La pasé súper, me divertí mucho y redescubrí mi amor por la
-            filosofía.”
-          </h3>
-          <h3>
-            “Una disciplina tan densa, casi inabordable para legos, la comprendí
-            y me apasioné por ella. La lucidez de David y la capacidad de
-            comunicación de Octavio crean una mezcla de la cual uno se siente
-            parte.”
-          </h3>
-        </div> -->
       </div>
     </div>
     <div></div>
@@ -174,12 +155,6 @@ import md5 from "js-md5";
 import { gsap } from "gsap";
 export default {
   name: "Marketplace",
-  props: {
-    expanded: {
-      type: Boolean,
-      default: () => false,
-    },
-  },
   data() {
     return {
       merchantId: 918167,
@@ -202,9 +177,6 @@ export default {
     },
   },
   methods: {
-    stripe: function () {
-      window.open("https://buy.stripe.com/14k7w6fYMevf2eA7sT", "_blank");
-    },
     show: function (target) {
       gsap.to(target, {
         duration: 1,
@@ -290,10 +262,6 @@ export default {
       this.target_height = "800px";
     } else {
       this.target_height = "400px";
-    }
-    if (this.expanded) {
-      this.show(".register");
-      this.show(".more_information");
     }
   },
 };
@@ -412,11 +380,7 @@ label {
 }
 
 .info_container {
-  padding: 30px 30px 5px 30px;
-}
-
-.info_container h4:first-child {
-  margin-top: 0px;
+  padding: 60px 30px 5px 30px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -436,13 +400,5 @@ label {
 
 .title-text {
   text-transform: uppercase;
-}
-
-.span2 {
-  grid-column: span 2;
-}
-
-.show {
-  height: 800px;
 }
 </style>
