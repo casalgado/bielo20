@@ -30,7 +30,7 @@
 
           <div class="marketplace-grid">
             <div class="button-cont" @click="stripe">
-              <div class="button">Inscribete</div>
+              <div class="button">Inscríbete</div>
             </div>
             <div
               class="button-cont"
@@ -55,7 +55,7 @@
             <br />1 de octubre (sesión de discusión de 2 horas)
           </h4>
           <h4>Hora: 10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid</h4>
-          <h4>Costo: $200,000 COP (IVA incluido)</h4>
+          <h4>Costo: $200,000 COP ≈45 USD (IVA incluido)</h4>
           <p>Cupos limitados.</p>
         </div>
         <div class="right-side">
@@ -118,12 +118,14 @@
             Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de<br />
             1 sesión de preguntas, respuestas y discusión (2 horas)
           </h4>
+          <h4>Fechas: <br />24 de septiembre y 1 de octubre</h4>
           <h4>
-            Fechas: <br />24 de septiembre (sesión expositiva de 2 horas) y
-            <br />1 de octubre (sesión de discusión de 2 horas)
+            Hora: <br />10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid
           </h4>
-          <h4>Hora: 10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid</h4>
-          <h4>Costo: $200,000 COP (IVA incluido)</h4>
+          <h4>
+            Costo: $200,000 COP (IVA incluido) <br />
+            ≈45 USD
+          </h4>
           <p>Cupos limitados.</p>
         </div>
 
@@ -203,7 +205,8 @@ export default {
   },
   methods: {
     stripe: function () {
-      window.open("https://buy.stripe.com/14k7w6fYMevf2eA7sT", "_blank");
+      //window.open("https://buy.stripe.com/14k7w6fYMevf2eA7sT", "_blank");
+      window.open("https://biz.payulatam.com/L0e0297211663A0", "_blank");
     },
     show: function (target) {
       gsap.to(target, {
