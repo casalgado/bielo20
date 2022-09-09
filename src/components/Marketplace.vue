@@ -206,7 +206,8 @@ export default {
   methods: {
     stripe: function () {
       //window.open("https://buy.stripe.com/14k7w6fYMevf2eA7sT", "_blank");
-      window.open("https://biz.payulatam.com/L0e0297211663A0", "_blank");
+      //window.open("https://biz.payulatam.com/L0e0297211663A0", "_blank");
+      window.open("https://biz.payulatam.com/B0e0297F76EBEC1", "_blank");
     },
     show: function (target) {
       gsap.to(target, {
