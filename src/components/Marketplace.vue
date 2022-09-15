@@ -114,18 +114,17 @@
         :class="this.expanded ? 'show' : ''"
       >
         <div class="info_container">
-          <h4>
-            Dos sesiones: <br />1 sesión expositiva (2 horas), seguida de<br />
-            1 sesión de preguntas, respuestas y discusión (2 horas)
-          </h4>
           <h4>Fechas: <br />24 de septiembre y 1 de octubre</h4>
           <h4>
             Hora: <br />10:00 a.m. de México y Colombia / 5:00 p.m. de Madrid
           </h4>
           <h4>
-            Costo: $200,000 COP (IVA incluido) <br />
-            ≈45 USD
+            Estructura del Taller: <br />24 de septiembre - 2 horas sesión
+            expositiva<br />
+            1 de octubre - 2 horas sesión de discusión (preguntas y respuestas)
           </h4>
+
+          <h4>Costo: $200,000 COP (IVA incluido)</h4>
           <p>Cupos limitados.</p>
         </div>
 
