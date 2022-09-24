@@ -14,11 +14,11 @@ const routes = [
     name: "home",
     component: () => import("../views/Home.vue"),
   },
-  {
-    path: "/club",
-    name: "club",
-    component: () => import("../views/TheClub.vue"),
-  },
+  // {
+  //   path: "/club",
+  //   name: "club",
+  //   component: () => import("../views/TheClub.vue"),
+  // },
   {
     path: "/estado",
     name: "estado",

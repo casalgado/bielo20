@@ -303,6 +303,9 @@ export default {
 </script>
 
 <style scoped>
+.marketplace {
+  display: none;
+}
 .marketplace-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
